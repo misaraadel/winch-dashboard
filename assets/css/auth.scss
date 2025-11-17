@@ -691,6 +691,10 @@
       background-color: #f8fafa;
       transition: border-color 0.3s ease;
 
+      &::placeholder {
+        color: #909090;
+      }
+
       @include media() {
         font-size: 13px;
         padding-inline-start: 45px !important;
@@ -2602,19 +2606,19 @@
       }
 
       &[data-strength="medium"] {
-        background-color: #9fe870;
+        background-color: #080;
 
         &::after {
-          background-color: #9fe870;
+          background-color: #080;
           background-image: url("../images/icons/check.svg");
         }
       }
 
       &[data-strength="strong"] {
-        background-color: #9fe870;
+        background-color: #080;
 
         &::after {
-          background-color: #9fe870;
+          background-color: #080;
           background-image: url("../images/icons/check.svg");
         }
       }

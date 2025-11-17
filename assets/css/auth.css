@@ -1201,6 +1201,12 @@ html[dir=rtl] .form-contain .form-group .icon {
   background-color: #f8fafa;
   transition: border-color 0.3s ease;
 }
+.form-contain .form-group .form-control::-moz-placeholder {
+  color: #909090;
+}
+.form-contain .form-group .form-control::placeholder {
+  color: #909090;
+}
 @media (max-width: 992px) {
   .form-contain .form-group .form-control {
     font-size: 13px;
@@ -3036,17 +3042,17 @@ html[dir=rtl] .login .back-btn img {
   background-image: url("../images/icons/error.svg");
 }
 .login .progress-password .tab[data-strength=medium] {
-  background-color: #9fe870;
+  background-color: #080;
 }
 .login .progress-password .tab[data-strength=medium]::after {
-  background-color: #9fe870;
+  background-color: #080;
   background-image: url("../images/icons/check.svg");
 }
 .login .progress-password .tab[data-strength=strong] {
-  background-color: #9fe870;
+  background-color: #080;
 }
 .login .progress-password .tab[data-strength=strong]::after {
-  background-color: #9fe870;
+  background-color: #080;
   background-image: url("../images/icons/check.svg");
 }
 @media (max-width: 992px) {

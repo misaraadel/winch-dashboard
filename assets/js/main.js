@@ -492,7 +492,7 @@ if (document.getElementById('growthChart')) {
           max: 100,
           ticks: {
             stepSize: 20,
-            color: '#808080',
+            color: '#080',
             font: {
               size: 12
             }
@@ -504,7 +504,7 @@ if (document.getElementById('growthChart')) {
         },
         x: {
           ticks: {
-            color: '#808080',
+            color: '#080',
             font: {
               size: 12
             }
