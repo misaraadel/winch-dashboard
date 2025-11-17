@@ -95,7 +95,7 @@
 .custom-btn {
   width: 130px;
   height: 48px;
-  border-radius: 50px;
+  border-radius: 10px;
   @include flexCenter();
   gap: 10px;
   transition: all 0.3s ease;
@@ -683,7 +683,7 @@
       width: 100%;
       height: 50px;
       border: 1px solid #f0f0f0 !important;
-      border-radius: 50px;
+      border-radius: 12px;
       padding-inline-start: 66px !important;
       color: var(--dark-color);
       font-size: 15px;
@@ -2287,7 +2287,7 @@
   z-index: 9;
   background: url("../images/login/login-pattern.webp") top left / cover
     no-repeat;
-  padding: 120px 0px 60px;
+  padding: 50px 0px 60px;
 
   .or-text {
     width: 100%;
@@ -2671,7 +2671,7 @@
     padding: 40px;
     background-color: var(--light-color);
     position: relative;
-    border-radius: 32px;
+    border-radius: 15px;
     overflow: hidden;
     z-index: 9;
     @include topBottomShadow();
