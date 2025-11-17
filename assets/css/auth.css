@@ -1192,7 +1192,7 @@ html[dir=rtl] .form-contain .form-group .icon {
   border-radius: 12px;
   padding-inline-start: 66px !important;
   color: var(--dark-color);
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
   background-color: #f8fafa;
   transition: border-color 0.3s ease;
