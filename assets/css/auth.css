@@ -3097,6 +3097,30 @@ html[dir=rtl] .login .back-btn img {
   z-index: 9;
   box-shadow: 0px 12px 32px rgba(112, 144, 176, 0.12), 0px -12px 32px rgba(112, 144, 176, 0.08);
 }
+.login .form-contain .error-message {
+  position: relative;
+  z-index: 9;
+  margin: -15px 0px 20px;
+  display: block;
+  padding-inline-start: 20px;
+  color: #f00;
+  font-size: 13px;
+  font-weight: 500;
+}
+.login .form-contain .error-message::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: url("../images/icons/error.svg") center/contain no-repeat;
+  top: calc(50% - 7.5px);
+  left: 0;
+  z-index: -1;
+}
+html[dir=rtl] .login .form-contain .error-message::after {
+  left: unset;
+  right: 0px;
+}
 .login .form-contain.no-hidden {
   overflow: visible;
 }
@@ -3139,6 +3163,12 @@ html[dir=rtl] .login .back-btn img {
 html[dir=rtl] .login .form-contain .form-group .icon {
   left: unset;
   right: 10px;
+}
+.login .form-contain .form-group.error .form-control {
+  border-color: #f00 !important;
+}
+.login .form-contain .form-group.error img {
+  filter: invert(11%) sepia(93%) saturate(6992%) hue-rotate(359deg) brightness(96%) contrast(114%);
 }
 .login .form-contain .form-group .show-pass {
   width: 24px;
@@ -3506,7 +3536,7 @@ html[dir=rtl] .login .search-input img {
   font-size: 16px;
   font-weight: 700;
   display: block;
-  margin-inline-start: 10px;
+  margin-inline-start: 5px;
 }
 .login .gray-color {
   color: var(--gray-color);

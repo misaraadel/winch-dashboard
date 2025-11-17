@@ -2679,6 +2679,33 @@
     z-index: 9;
     @include topBottomShadow();
 
+    .error-message {
+      position: relative;
+      z-index: 9;
+      margin: -15px 0px 20px;
+      display: block;
+      padding-inline-start: 20px;
+      color: #f00;
+      font-size: 13px;
+      font-weight: 500;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: url('../images/icons/error.svg') center / contain no-repeat;
+        top: calc(50% - 7.5px);
+        left: 0;
+        z-index: -1;
+
+        @include rtl() {
+          left: unset;
+          right: 0px;
+        }
+      }
+    }
+
     &.no-hidden {
       overflow: visible;
     }
@@ -2720,6 +2747,16 @@
         @include rtl() {
           left: unset;
           right: 10px;
+        }
+      }
+
+      &.error {
+        .form-control {
+          border-color: #f00 !important;
+        }
+
+        img {
+          filter: invert(11%) sepia(93%) saturate(6992%) hue-rotate(359deg) brightness(96%) contrast(114%);
         }
       }
 
@@ -3123,7 +3160,7 @@
         font-size: 16px;
         font-weight: 700;
         display: block;
-        margin-inline-start: 10px;
+        margin-inline-start: 5px;
       }
     }
   }

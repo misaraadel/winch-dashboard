@@ -38,7 +38,9 @@
                 إنشاء حساب
               </h1>
 
-              <div class="form-group form-shape">
+              <!--add class error to the form-group if there is an error-->
+
+              <div class="form-group form-shape ">
                 <img
                   src="assets/images/forms/user.svg"
                   class="icon"
@@ -52,6 +54,11 @@
                   placeholder="اسم الشركة"
                 />
               </div>
+
+              <!--error message-->
+              <!-- <span class="error-message">
+                هناك خطأ في اسم الشركة
+              </span> -->
 
               <div class="form-group form-shape">
                 <img
@@ -163,7 +170,7 @@
                   <label class="radio-title" for="remain">
                     موافقة على
 
-                    <span> الشروط والأحكام </span>
+                    <a href="terms.html" class="link"> الشروط والأحكام </a>
                   </label>
                 </div>
               </div>
