@@ -1,23 +1,23 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Almarai";
-  src: url("../fonts/Almarai/Almarai-Bold.ttf");
+  font-family: "Cairo";
+  src: url("../fonts/Cairo/Cairo-Medium.ttf");
   font-weight: 700;
 }
 @font-face {
-  font-family: "Almarai";
-  src: url("../fonts/Almarai/Almarai-Regular.ttf");
+  font-family: "Cairo";
+  src: url("../fonts/Cairo/Cairo-Regular.ttf");
   font-weight: 500;
 }
 @font-face {
-  font-family: "Almarai";
-  src: url("../fonts/Almarai/Almarai-ExtraBold.ttf");
+  font-family: "Cairo";
+  src: url("../fonts/Cairo/Cairo-Black.ttf");
   font-weight: 900;
 }
 * {
   margin: 0px;
   box-sizing: border-box;
-  font-family: "Almarai", sans-serif;
+  font-family: "Cairo", sans-serif;
   scroll-behavior: smooth;
 }
 *::-moz-selection {
