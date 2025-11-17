@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="...." />
+    <meta name="author" content="misara adel" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Winch</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/lib/animate.css" />
+    <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/lib/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/lib/jquery.fancybox.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+  </head>
+  <body>
+    <section class="login">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-12 mx-auto">
+            <form class="form-contain no-hidden">
+              <a href="#" class="brand-name">
+                <img src="assets/images/logo/logo.svg" loading="lazy" alt="" />
+              </a>
+
+              <h1>
+                استكمال بيانات 
+              </h1>
+
+              <div
+                class="profile-avatar mb-3"
+                id="imagePreview"
+                style="background-image: url('assets/images/icons/user.svg')"
+              >
+                <input
+                  type="file"
+                  class="custom-file-input"
+                  id="imageUpload"
+                  required=""
+                  capture=""
+                />
+
+                <label for="imageUpload" id="noneData" class="edit-btn">
+                  <img
+                    src="assets/images/icons/edit-light.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+                </label>
+              </div>
+
+              <div class="form-group form-shape">
+                <img
+                  src="assets/images/forms/user.svg"
+                  class="icon"
+                  loading="lazy"
+                  alt=""
+                />
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="اسم العميل "
+                />
+              </div>
+
+              <div class="form-group phone-input form-shape">
+                <img src="assets/images/forms/phone.svg" alt="" class="icon" />
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="رقم الهاتف"
+                />
+
+                <div class="country-select">
+                  <button type="button" id="selected-country">
+                    <img
+                      src="https://flagcdn.com/eg.svg"
+                      alt="EG"
+                      class="flag"
+                    />
+                    <span id="dial-code">+20</span>
+                  </button>
+                  <div id="country-dropdown" class="hidden">
+                    <div class="search-input">
+                      <img
+                        src="assets/images/icons/search.svg"
+                        loading="lazy"
+                        alt=""
+                      />
+
+                      <input
+                        type="text"
+                        id="country-search"
+                        class="form-control"
+                        placeholder="ابحث عن دولة..."
+                      />
+                    </div>
+                    <ul id="country-list"></ul>
+                  </div>
+                </div>
+              </div>
+
+              <a href="files.html" class="custom-btn dark-btn w-100 mt-3">
+                <span>
+                  استمرار 
+                </span>
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/lib/jquery4.js"></script>
+    <script src="assets/js/lib/popper.js"></script>
+    <script src="assets/js/lib/bootstrap.js"></script>
+    <script src="assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="assets/js/lib/jquery.fancybox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

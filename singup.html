@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="...." />
+    <meta name="author" content="misara adel" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Winch</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/lib/animate.css" />
+    <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/lib/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/lib/jquery.fancybox.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+  </head>
+  <body>
+    <section class="login">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-12 mx-auto">
+            <form class="form-contain">
+              <a href="#" class="brand-name">
+                <img src="assets/images/logo/logo.svg" loading="lazy" alt="" />
+              </a>
+
+              <h1>
+                إنشاء حساب
+              </h1>
+
+              <div class="form-group form-shape">
+                <img
+                  src="assets/images/forms/user.svg"
+                  class="icon"
+                  loading="lazy"
+                  alt=""
+                />
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="اسم الشركة"
+                />
+              </div>
+
+              <div class="form-group form-shape">
+                <img
+                  src="assets/images/forms/sms.svg"
+                  class="icon"
+                  loading="lazy"
+                  alt=""
+                />
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="البريد الإلكتروني"
+                />
+              </div>
+
+              <div class="form-group form-shape">
+                <div class="form-icon show_hide_password">
+                  <img
+                    src="assets/images/forms/lock.svg"
+                    loading="lazy"
+                    class="icon"
+                    alt=""
+                  />
+
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="كلمة المرور"
+                    id="password"
+                    name="password"
+                  />
+
+                  <div class="show-pass">
+                    <img
+                      src="assets/images/icons/show-pass.svg"
+                      class="icons"
+                      loading="lazy"
+                      alt=""
+                    />
+                    <img
+                      src="assets/images/icons/password.svg"
+                      class="slash-icon"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Password Strength Indicator -->
+              <div
+                class="password-strength"
+                id="passwordStrength"
+                style="display: none"
+              >
+                <div class="progress-password">
+                  <div class="tab" data-strength="weak"></div>
+                  <div class="tab" data-strength="medium"></div>
+                  <div class="tab" data-strength="strong"></div>
+                </div>
+
+                <div class="strength-message" id="strengthMessage"></div>
+              </div>
+
+              <div class="form-group form-shape">
+                <div class="form-icon show_hide_password">
+                  <img
+                    src="assets/images/forms/lock.svg"
+                    loading="lazy"
+                    class="icon"
+                    alt=""
+                  />
+
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="تأكيد كلمة المرور"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                  />
+
+                  <div class="show-pass">
+                    <img
+                      src="assets/images/icons/show-pass.svg"
+                      class="icons"
+                      loading="lazy"
+                      alt=""
+                    />
+                    <img
+                      src="assets/images/icons/password.svg"
+                      class="slash-icon"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-data">
+                <div class="wrapper w-100">
+                  <input
+                    type="checkbox"
+                    name="privacyPolicy"
+                    id="remain"
+                    class="radio-check"
+                  />
+
+                  <label class="radio-title" for="remain">
+                    موافقة على
+
+                    <span> الشروط والأحكام </span>
+                  </label>
+                </div>
+              </div>
+
+              <a href="otp.html" class="custom-btn dark-btn w-100 mt-3">
+                <span>إنشاء حساب جديد</span>
+              </a>
+
+              <a href="login.html" class="data-link center-data">
+                <span> لديك حساب؟ </span>
+
+                <b> تسجيل الدخول </b>
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/lib/jquery4.js"></script>
+    <script src="assets/js/lib/popper.js"></script>
+    <script src="assets/js/lib/bootstrap.js"></script>
+    <script src="assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="assets/js/lib/jquery.fancybox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      $(document).ready(function () {
+        console.log("jQuery loaded:", typeof $ !== "undefined");
+        console.log("Document ready!");
+
+        // Password strength checker
+        function checkPasswordStrength(password) {
+          let strength = 0;
+          let messages = [];
+
+          // Check length
+          if (password.length >= 8) {
+            strength += 1;
+          } else {
+            messages.push("يجب ألا تقل كلمة المرور عن 8 أحرف");
+          }
+
+          // Check for letters and numbers
+          if (/[a-zA-Z]/.test(password) && /[0-9]/.test(password)) {
+            strength += 1;
+          } else {
+            messages.push("يجب أن تحتوي على أحرف وأرقام");
+          }
+
+          // Check for special characters
+          if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+            strength += 1;
+          } else {
+            messages.push("يجب أن تحتوي على رموز خاصة");
+          }
+
+          return { strength, messages };
+        }
+
+        function updatePasswordStrength(password) {
+          const strengthIndicator = $("#passwordStrength");
+          const strengthMessage = $("#strengthMessage");
+          const tabs = $(".progress-password .tab");
+          const passwordField = $("#password").closest(".form-icon");
+
+          if (password.length === 0) {
+            strengthIndicator.hide();
+            passwordField.removeClass(
+              "password-weak password-medium password-strong"
+            );
+            // Reset all tabs to default
+            tabs.removeAttr("data-strength");
+            return;
+          }
+
+          strengthIndicator.show();
+
+          const result = checkPasswordStrength(password);
+
+          // Reset all tabs
+          tabs.removeAttr("data-strength");
+
+          // Update tabs based on strength
+          if (result.strength === 0) {
+            // Very weak - only first tab red
+            tabs.eq(0).attr("data-strength", "weak");
+            tabs.eq(1).removeAttr("data-strength");
+            tabs.eq(2).removeAttr("data-strength");
+          } else if (result.strength === 1) {
+            // Weak - first tab red
+            tabs.eq(0).attr("data-strength", "weak");
+            tabs.eq(1).removeAttr("data-strength");
+            tabs.eq(2).removeAttr("data-strength");
+          } else if (result.strength === 2) {
+            // Medium - first two tabs green
+            tabs.eq(0).attr("data-strength", "medium");
+            tabs.eq(1).attr("data-strength", "medium");
+            tabs.eq(2).removeAttr("data-strength");
+          } else {
+            // Strong - all tabs green
+            tabs.eq(0).attr("data-strength", "strong");
+            tabs.eq(1).attr("data-strength", "strong");
+            tabs.eq(2).attr("data-strength", "strong");
+          }
+
+          // Set message and color
+          let message = "";
+          let color = "";
+
+          // Remove all password strength classes
+          passwordField.removeClass(
+            "password-weak password-medium password-strong"
+          );
+
+          if (result.strength === 0) {
+            message = "ضعيفة جدًا: " + result.messages.join(". ");
+            color = "#f00";
+            passwordField.addClass("password-weak");
+          } else if (result.strength === 1) {
+            message = "ضعيفة: " + result.messages.join(". ");
+            color = "#f00";
+            passwordField.addClass("password-weak");
+          } else if (result.strength === 2) {
+            message = "مقبول: قم بتضمين رموز خاصة لجعلها أكثر أمانًا.";
+            color = "#7F7F7F";
+            passwordField.addClass("password-medium");
+          } else {
+            message = "قوية";
+            color = "#9FE870";
+            passwordField.addClass("password-strong");
+          }
+
+          strengthMessage.text(message).css("color", color);
+        }
+
+        // Password input event
+        $("#password").on("input", function () {
+          const password = $(this).val();
+          updatePasswordStrength(password);
+        });
+
+        // Confirm password validation
+        $("#confirmPassword").on("input", function () {
+          const password = $("#password").val();
+          const confirmPassword = $(this).val();
+          const confirmField = $(this).closest(".form-icon");
+
+          if (confirmPassword.length === 0) {
+            confirmField.removeClass("password-match password-mismatch");
+            return;
+          }
+
+          if (password === confirmPassword) {
+            confirmField
+              .removeClass("password-mismatch")
+              .addClass("password-match");
+          } else {
+            confirmField
+              .removeClass("password-match")
+              .addClass("password-mismatch");
+          }
+        });
+
+        $(".show-pass").each(function () {
+          $(this).on("click", function (e) {
+            e.preventDefault();
+
+            const input = $(this).parents(".form-icon").find("input");
+
+            if (input.attr("type") === "password") {
+              input.attr("type", "text");
+              $(this).addClass("active");
+            } else {
+              input.attr("type", "password");
+              $(this).removeClass("active");
+            }
+          });
+        });
+
+        // Form submission
+        $("form").on("submit", function (e) {
+          e.preventDefault();
+
+          const password = $("#password").val();
+          const confirmPassword = $("#confirmPassword").val();
+
+          if (password !== confirmPassword) {
+            alert("كلمات المرور غير متطابقة");
+            return;
+          }
+
+          const result = checkPasswordStrength(password);
+          if (result.strength < 2) {
+            alert("كلمة المرور ضعيفة جدًا. يرجى اختيار كلمة مرور أقوى.");
+            return;
+          }
+
+          // Proceed with form submission
+          console.log("Form submitted successfully");
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(".show-pass").on("click", function (event) {
+          event.preventDefault();
+
+          $(this).toggleClass("active");
+        });
+
+        $(".show_hide_password .show-pass").on("click", function (event) {
+          event.preventDefault();
+          if ($(this).siblings("input").attr("type") == "text") {
+            $(this).siblings("input").attr("type", "password");
+          } else if ($(this).siblings("input").attr("type") == "password") {
+            $(this).siblings("input").attr("type", "text");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

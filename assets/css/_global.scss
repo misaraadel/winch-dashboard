@@ -1,0 +1,201 @@
+@font-face {
+  font-family: "Almarai";
+  src: url("../fonts/Almarai/Almarai-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Almarai";
+  src: url("../fonts/Almarai/Almarai-Regular.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Almarai";
+  src: url("../fonts/Almarai/Almarai-ExtraBold.ttf");
+  font-weight: 900;
+}
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Almarai", sans-serif;
+  scroll-behavior: smooth;
+
+  &::selection {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--light-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+  }
+}
+
+.overflowNone {
+  overflow: hidden;
+}
+
+.btn:focus,
+button:focus,
+input:focus,
+.form-control:focus {
+  outline-width: 0px !important;
+  outline-color: transparent !important;
+  box-shadow: 0 0 0 0 rgba($color: #000000, $alpha: 0);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+button {
+  outline: none !important;
+  border: 0px !important;
+}
+
+.swiper-pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  .swiper-pagination-bullet {
+    width: 33px;
+    height: 3px;
+    background-color: rgba($color: #63bcb8, $alpha: 0.5);
+    border-radius: 2px;
+
+    &.swiper-pagination-bullet-active {
+      opacity: 1 !important;
+      background-color: var(--primary-color);
+    }
+  }
+}
+
+input[type="date"] {
+  padding-right: 8px !important;
+}
+
+input[type="date"] {
+  padding-left: 10px !important;
+}
+
+.flatpickr {
+  position: relative;
+  z-index: 9;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: url("/assets/images/icons/date.svg") center / contain no-repeat;
+    border: 0px;
+    width: 30px;
+    top: calc(50% - 15px);
+    right: 10px;
+    height: 30px;
+    pointer-events: none;
+  }
+}
+
+html[dir="rtl"] .flatpickr::after {
+  left: 10px;
+  right: unset;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  position: relative;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+// Custom number input with arrows
+.days-number {
+  padding-right: 60px !important;
+}
+
+.form-group.numbers {
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background: #e8e8e8;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  
+  .number-controls {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    z-index: 1;
+    
+    button {
+      width: 15px;
+      height: 15px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        opacity: 0.7;
+      }
+      
+      &::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+      }
+      
+      &.increment {
+        background: url("/assets/images/icons/top-arrow.svg") center / contain no-repeat;
+      }
+      
+      &.decrement {
+        
+        background: url("/assets/images/icons/top-arrow.svg") center / contain no-repeat;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
