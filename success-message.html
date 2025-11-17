@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="...." />
+    <meta name="author" content="misara adel" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Winch</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/lib/animate.css" />
+    <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/lib/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/lib/jquery.fancybox.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+  </head>
+  <body>
+    <section class="login">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-12 mx-auto">
+            <form class="form-contain">
+              <!-- <a href="#" class="brand-name">
+                <img src="assets/images/logo/logo.svg" loading="lazy" alt="" />
+              </a> -->
+
+              <h1 style="font-weight: 900">تم انشاء حسابك بنجاح</h1>
+
+              <img
+                src="assets/images/check.png"
+                class="large-image"
+                loading="lazy"
+                alt=""
+              />
+
+              <p class="description">
+                <b style="font-weight: 900; margin-bottom: 10px; display: block"
+                  >طلبك قيد المراجعة الآن
+                </b>
+
+                فريقنا يقوم الان بمراجعة مستنداتك
+                <br />
+                وسنرسل لك اشعار فور الموافقة علي طلبك
+              </p>
+
+              <a href="#" class="custom-btn dark-btn mt-5 w-100">
+                <span> الذهاب للصفحة الرئيسية </span>
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/lib/jquery4.js"></script>
+    <script src="assets/js/lib/popper.js"></script>
+    <script src="assets/js/lib/bootstrap.js"></script>
+    <script src="assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="assets/js/lib/jquery.fancybox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      // دالة لإعداد كل upload box
+      function setupFileUpload(inputId, boxElement) {
+        const fileInput = document.getElementById(inputId);
+        const loader = boxElement.querySelector(".loader");
+        const fileName = boxElement.querySelector(".file-name");
+        const uploadBtn = boxElement.querySelector(".upload-btn");
+
+        fileInput.addEventListener("change", () => {
+          if (fileInput.files.length > 0) {
+            fileName.textContent = fileInput.files[0].name;
+
+            // إظهار اللودر
+            loader.style.display = "inline-block";
+            uploadBtn.style.display = "none";
+
+            // محاكاة رفع الملف (3 ثواني)
+            setTimeout(() => {
+              loader.style.display = "none";
+              uploadBtn.style.display = "flex";
+              fileName.textContent =
+                "✔ تم رفع الملف: " + fileInput.files[0].name;
+            }, 3000);
+          }
+        });
+      }
+
+      // إعداد كل الـ upload boxes
+      document.querySelectorAll(".upload-box").forEach((box, index) => {
+        setupFileUpload(`fileInput${index + 1}`, box);
+      });
+    </script>
+  </body>
+</html>

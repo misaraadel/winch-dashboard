@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="...." />
+    <meta name="author" content="misara adel" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Winch</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/lib/animate.css" />
+    <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/lib/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/lib/jquery.fancybox.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+  </head>
+  <body>
+    <section class="login">
+      <div class="verify-email">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-11 mx-auto">
+              <div class="contain">
+                <a href="personal-information.html" class="back-btn">
+                  <img
+                    src="assets/images/icons/back.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+
+                  <span>
+                    العوده الى الشخص المسؤول
+                  </span>
+                </a>
+              </div>
+
+              <div class="box">
+                <img
+                  src="assets/images/email_verfiy.svg"
+                  loading="lazy"
+                  class="email-img"
+                  alt=""
+                />
+
+               <h1>
+                التحقق من رقم الهاتف
+               </h1>
+
+                <p>
+                  يرجى إدخال رمز التحقق الذي تم إرساله إلى
+                   :  
+                  <span class="name"> 201007425819+ </span>
+                  
+                </p>
+
+                <form action="" class="form-contain">
+                  <div class="otp-container">
+                    <input
+                      type="text"
+                      maxlength="1"
+                      class="otp-input"
+                      id="digit1"
+                    />
+                    <input
+                      type="text"
+                      maxlength="1"
+                      class="otp-input"
+                      id="digit2"
+                    />
+                    <input
+                      type="text"
+                      maxlength="1"
+                      class="otp-input"
+                      id="digit3"
+                    />
+                    <input
+                      type="text"
+                      maxlength="1"
+                      class="otp-input"
+                      id="digit4"
+                    />
+                  </div>
+
+                  <a href="files.html" class="custom-btn dark-btn">
+                    <span> تحقق من الرمز </span>
+                  </a>
+
+                  <span class="data-contain">
+                    التحقق من
+                    <b> رسائل الهاتف </b>
+                    للتحقق من رقم الهاتف. الرابط سيكون صالح لمدة 5 دقائق
+                  </span>
+
+                  <div class="resend-text">
+                    اعاده ارسال رمز التحقق
+
+                    <div class="countdown-container">
+                      <div class="progress-circle" id="progress-circle"></div>
+                      <div class="countdown-number" id="countdown-number">
+                        44
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/lib/jquery4.js"></script>
+    <script src="assets/js/lib/popper.js"></script>
+    <script src="assets/js/lib/bootstrap.js"></script>
+    <script src="assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="assets/js/lib/jquery.fancybox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      $(document).ready(function () {
+        let timer = 44;
+        let totalTime = 44;
+
+        function updateProgress() {
+          document.getElementById("countdown-number").textContent = timer;
+
+          // تحديث الدائرة باستخدام conic-gradient
+          let angle = (timer / totalTime) * 360;
+          document.getElementById(
+            "progress-circle"
+          ).style.background = `conic-gradient(#162883 ${angle}deg, #ddd 0deg)`;
+
+          if (timer > 0) {
+            timer--;
+            setTimeout(updateProgress, 1000);
+          } else {
+            document.querySelector(".countdown-container").innerHTML =
+              '<a href="#" id="resend-code">اعاده ارسال</a>';
+          }
+        }
+
+        updateProgress();
+
+        $(".otp-input").on("input", function () {
+          if (this.value.length === this.maxLength) {
+            $(this).next(".otp-input").focus();
+          }
+        });
+
+        $(".otp-input").on("keydown", function (e) {
+          if (e.key === "Backspace" && this.value.length === 0) {
+            $(this).prev(".otp-input").focus().val("");
+          }
+        });
+
+        $(document).on("paste", function (e) {
+          let pastedData = (e.originalEvent || e).clipboardData.getData("text");
+          if (pastedData.length === 4 && !isNaN(pastedData)) {
+            let digits = pastedData.split("");
+            $(".otp-input").each(function (index) {
+              $(this).val(digits[index]);
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

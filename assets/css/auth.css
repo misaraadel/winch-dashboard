@@ -1159,6 +1159,32 @@ html[dir=rtl] .form-contain .form-group label {
     right: 10px;
   }
 }
+.form-contain .form-group.select-data {
+  position: relative;
+  z-index: 9;
+}
+.form-contain .form-group.select-data::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: url("../images/icons/down-arrow.svg") center/contain no-repeat;
+  top: calc(50% - 12px);
+  left: 10px;
+  z-index: 9;
+  pointer-events: none;
+  filter: var(--primary-filter);
+}
+html[dir=ltr] .form-contain .form-group.select-data::after {
+  right: 10px;
+  left: unset;
+}
+.form-contain .form-group.select-data .form-control {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #909090;
+}
 .form-contain .form-group.form-shape {
   margin-bottom: 24px;
 }
@@ -2765,6 +2791,12 @@ html[dir=rtl] .main-content .card .card-header .btn::after {
   width: fit-content;
   padding: 0px 10px;
 }
+.login .description {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--gray-color);
+  text-align: center;
+}
 .login .verify-email {
   width: 100%;
 }
@@ -2800,13 +2832,13 @@ html[dir=rtl] .main-content .card .card-header .btn::after {
   z-index: 9;
   border-radius: 32px;
   background-color: var(--light-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   align-content: center;
   justify-content: center;
+  box-shadow: 0px 12px 32px rgba(112, 144, 176, 0.12), 0px -12px 32px rgba(112, 144, 176, 0.08);
   text-align: center;
 }
 @media (max-width: 992px) {
@@ -3265,9 +3297,8 @@ html[dir=rtl] .login .form-contain .form-group .form-control {
 }
 .login .data-link span {
   color: var(--gray-color);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
-  text-decoration: underline;
   margin: 0px 10px;
 }
 @media (max-width: 992px) {
@@ -3379,7 +3410,7 @@ html[dir=ltr] .login .country-select {
 .login .country-select button span {
   color: var(--gray-color);
   z-index: 9;
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 500;
   direction: ltr;
 }
@@ -3433,7 +3464,7 @@ html[dir=ltr] .login #country-dropdown {
   flex: 1;
   border: none;
   outline: none;
-  font-size: 14px;
+  font-size: 18px;
 }
 .login .search-input {
   width: 100%;
@@ -3547,6 +3578,25 @@ html[dir=rtl] .login .search-input img {
   display: block;
   margin-inline-start: 5px;
 }
+.login .large-image {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 0px auto 40px;
+  display: block;
+}
+@media (max-width: 992px) {
+  .login .large-image {
+    margin-bottom: 20px;
+  }
+}
+.login .large-img {
+  font-size: 100px;
+  display: block;
+  margin: 0px auto;
+  text-align: center;
+}
 .login .gray-color {
   color: var(--gray-color);
   font-size: 18px;
@@ -3622,7 +3672,7 @@ html[dir=rtl] .login .links-contain a img.arrow-icon {
   border: 2px dashed #f8fafa !important;
   background-color: #f8fafa;
   border-radius: 12px;
-  padding: 30px;
+  padding: 15px 10px;
   width: 100%;
   margin: 0px auto 10px;
   position: relative;
@@ -3638,7 +3688,7 @@ html[dir=rtl] .login .links-contain a img.arrow-icon {
 }
 .upload-box p {
   color: var(--gray-color);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   margin: 0px;
 }
@@ -3652,8 +3702,8 @@ html[dir=rtl] .login .links-contain a img.arrow-icon {
   display: none; /* مخفي */
 }
 .upload-box .file-name {
-  font-size: 14px;
-  color: var(--primary-color);
+  font-size: 16px;
+  color: #080;
 }
 
 @media (max-width: 999px) {

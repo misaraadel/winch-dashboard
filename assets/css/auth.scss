@@ -647,6 +647,34 @@
       }
     }
 
+    &.select-data {
+      position: relative;
+      z-index: 9;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: url('../images/icons/down-arrow.svg') center / contain no-repeat;
+        top: calc(50% - 12px);
+        left: 10px;
+        z-index: 9;
+        pointer-events: none;
+        filter: var(--primary-filter);
+
+        @include ltr() {
+          right: 10px;
+          left: unset;
+        }
+      }
+
+      .form-control {
+        appearance: none;
+        color: #909090;
+      }
+    }
+
     &.form-shape {
       margin-bottom: 24px;
 
@@ -2327,6 +2355,13 @@
     }
   }
 
+  .description {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--gray-color);
+    text-align: center;
+  }
+
   .verify-email {
     width: 100%;
 
@@ -2358,11 +2393,11 @@
         z-index: 9;
         border-radius: 32px;
         background-color: var(--light-color);
-        border: 1px solid rgba($color: #000, $alpha: 0.1);
         @include flexColumnCenter();
         align-items: center;
         align-content: center;
         justify-content: center;
+        @include topBottomShadow();
         text-align: center;
 
         @include media() {
@@ -2859,9 +2894,8 @@
 
     span {
       color: var(--gray-color);
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 500;
-      text-decoration: underline;
       margin: 0px 10px;
 
       @include media() {
@@ -2975,7 +3009,7 @@
     span {
       color: var(--gray-color);
       z-index: 9;
-      font-size: 15px;
+      font-size: 19px;
       font-weight: 500;
       direction: ltr;
     }
@@ -3034,7 +3068,7 @@
     flex: 1;
     border: none;
     outline: none;
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .search-input {
@@ -3167,6 +3201,25 @@
     }
   }
 
+  .large-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin: 0px auto 40px;
+    display: block;
+
+    @include media() {
+      margin-bottom: 20px;
+    }
+  }
+
+  .large-img {
+    font-size: 100px;
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+  }
+
   .gray-color {
     color: var(--gray-color);
     font-size: 18px;
@@ -3245,7 +3298,7 @@
   border: 2px dashed #f8fafa !important;
   background-color: #f8fafa;
   border-radius: 12px;
-  padding: 30px;
+  padding: 15px 10px;
   width: 100%;
   margin: 0px auto 10px;
   position: relative;
@@ -3260,7 +3313,7 @@
 
   p {
     color: var(--gray-color);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     margin: 0px;
   }
@@ -3276,8 +3329,8 @@
   }
 
   .file-name {
-    font-size: 14px;
-    color: var(--primary-color);
+    font-size: 16px;
+    color: #080;
   }
 }
 
