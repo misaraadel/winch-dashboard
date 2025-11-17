@@ -771,10 +771,6 @@ input[type=number]::-webkit-outer-spin-button {
 .custom-btn.red-btn:hover {
   background-color: var(--primary-color);
 }
-.custom-btn:hover {
-  transform: scale(0.95);
-  box-shadow: 0px 12px 32px rgba(112, 144, 176, 0.12), 0px -12px 32px rgba(112, 144, 176, 0.08);
-}
 
 .top-nav {
   width: 100%;
@@ -1133,7 +1129,7 @@ html[dir=rtl] .side-nav .brand-name img {
 }
 .form-contain .form-group {
   width: 100%;
-  height: 50px;
+  height: 56px;
   position: relative;
   z-index: 9;
 }
@@ -1191,7 +1187,7 @@ html[dir=rtl] .form-contain .form-group .icon {
 }
 .form-contain .form-group .form-control {
   width: 100%;
-  height: 50px;
+  height: 56px;
   border: 1px solid #f0f0f0 !important;
   border-radius: 12px;
   padding-inline-start: 66px !important;
