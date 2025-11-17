@@ -107,7 +107,7 @@
   }
 
   span {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
   }
 
@@ -660,11 +660,11 @@
     }
 
     .icon {
-      width: 24px;
-      height: 24px;
+      width: 23px;
+      height: 23px;
       object-fit: contain;
       position: absolute;
-      top: calc(50% - 12px);
+      top: calc(50% - 11.5px);
       right: 15px;
       transition: filter 0.3s ease;
 
@@ -2182,14 +2182,14 @@
     .radio-title {
       color: var(--primary-color);
       display: flex;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 500;
       cursor: pointer;
       margin-bottom: 0px !important;
 
       .link {
         color: var(--primary-color);
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 700;
         margin-inline-start: 5px;
       }
@@ -2808,8 +2808,10 @@
   }
 
   .data-link {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
+    @include flexData();
+    gap: 10px;
     color: var(--dark-color);
 
     @include media() {
@@ -2821,6 +2823,7 @@
       font-size: 16px;
       font-weight: 500;
       text-decoration: underline;
+      margin: 0px 10px;
 
       @include media() {
         font-size: 12px;
@@ -3111,11 +3114,16 @@
       cursor: pointer;
       margin-bottom: 0px !important;
 
+      span {
+        margin-inline-end: 10px;
+      }
+
       .link {
         color: var(--primary-color);
         font-size: 16px;
         font-weight: 700;
-        margin-inline-start: 5px;
+        display: block;
+        margin-inline-start: 10px;
       }
     }
   }
