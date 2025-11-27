@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="assets/css/lib/jquery.fancybox.css" />
     <link rel="stylesheet" href="assets/css/auth.css" />
   </head>
-  <body>
+  <body class="dashboard-body">
     <section class="top-nav">
       <div class="container-fluid">
         <div class="contain">
@@ -54,972 +54,622 @@
               />
             </a>
 
-            <a href="#" class="profile">
+            <a href="#" class="custom-btn dark-btn small-btn">
               <img
-                src="assets/images/icons/user.svg"
+                src="assets/images/icons/add.svg"
                 loading="lazy"
-                class="user-img"
                 alt=""
-              />
-
-              <span> Mahmoud ElSaey </span>
-
-              <img
-                src="assets/images/icons/setting.svg"
-                loading="lazy"
                 class="icon"
-                alt=""
               />
+              <span> رحلات جديدة </span>
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="side-nav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a href="dashboard.html" class="nav-link">
-            <img src="assets/images/sideNav/home.svg" loading="lazy" alt="" />
-
-            <span>الرئيسية </span>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="transactions.html" class="nav-link active">
-            <img
-              src="assets/images/sideNav/transactions.svg"
-              loading="lazy"
-              alt=""
-            />
-
-            <span>الرحلات</span>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <img src="assets/images/sideNav/bill.svg" loading="lazy" alt="" />
-
-            <span>الفواتير</span>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <img
-              src="assets/images/sideNav/balances.svg"
-              loading="lazy"
-              alt=""
-            />
-
-            <span>المدفوعات </span>
-          </a>
-        </li>
-      </ul>
-    </section>
-
     <main class="dashboard-contain">
-      <div class="flex-between-data">
-        <h1 class="page-name">الرحلات</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-12 mb-3">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="dashboard.html" class="nav-link">
+                  <img
+                    src="assets/images/sideNav/home.svg"
+                    loading="lazy"
+                    alt=""
+                  />
 
-        <a href="#" class="custom-btn dark-btn small-btn">
-          <img
-            src="assets/images/icons/add.svg"
-            loading="lazy"
-            alt=""
-            class="icon"
-          />
-          <span> رحلات جديدة </span>
-        </a>
+                  <span>الرئيسية </span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="transactions.html" class="nav-link active">
+                  <img
+                    src="assets/images/sideNav/transactions.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+
+                  <span>الرحلات</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <img
+                    src="assets/images/sideNav/bill.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+
+                  <span>الفواتير</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <img
+                    src="assets/images/sideNav/balances.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+
+                  <span>المدفوعات </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-9 col-12">
+            <div class="data-contain-transactions">
+              <h1 class="page-name">الرحلات</h1>
+
+              <div class="filter-tabs">
+                <a href="#" class="box active">
+                  <img
+                    src="assets/images/transiction/all.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+
+                  <div class="data">
+                    <span> الكل </span>
+
+                    <h2>3,210</h2>
+                  </div>
+                </a>
+
+                <a href="#" class="box">
+                  <img
+                    src="assets/images/transiction/new_status.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+
+                  <div class="data">
+                    <span> جديد </span>
+
+                    <h2>2,100</h2>
+                  </div>
+                </a>
+
+                <a href="#" class="box">
+                  <img
+                    src="assets/images/transiction/succeeded.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+
+                  <div class="data">
+                    <span> مكتمل </span>
+
+                    <h2>100</h2>
+                  </div>
+                </a>
+
+                <a href="#" class="box">
+                  <img
+                    src="assets/images/transiction/disputed.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+
+                  <div class="data">
+                    <span> قيد الانتظار </span>
+
+                    <h2>0</h2>
+                  </div>
+                </a>
+
+                <a href="#" class="box">
+                  <img
+                    src="assets/images/transiction/refunded.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+
+                  <div class="data">
+                    <span> مقبول </span>
+
+                    <h2>25</h2>
+                  </div>
+                </a>
+
+                <a href="#" class="box">
+                  <img
+                    src="assets/images/transiction/failed.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+
+                  <div class="data">
+                    <span> ملغي </span>
+
+                    <h2>210</h2>
+                  </div>
+                </a>
+              </div>
+
+              <div class="accordion" id="accordionExample">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <button
+                      class="btn btn-block text-left"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      <div class="flex-data">
+                        <a href="#" class="link">
+                          <img
+                            src="assets/images/transiction/link.svg"
+                            loading="lazy"
+                            alt=""
+                            class="icon"
+                          />
+
+                          <span> #627130 </span>
+                        </a>
+
+                        <div class="link dark-link">
+                          <img
+                            src="assets/images/icons/date.svg"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span> منذ أسبوع </span>
+                        </div>
+
+                        <span class="status success"> مكتمل </span>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    id="collapseOne"
+                    class="collapse show"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordionExample"
+                  >
+                    <div class="card-body">
+                      <h2 class="data-title">بيانات الرحلة</h2>
+
+                      <ul class="location-list">
+                        <li>
+                          <div class="icon">
+                            <img
+                              src="assets/images/icons/package.png"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </div>
+
+                          <span>
+                            المنطقة الصناعية قويسنا
+                            <br />
+                            مكتب بريد منطقة مبارك الصناعية
+                          </span>
+                        </li>
+
+                        <li>
+                          <div class="icon">
+                            <img
+                              src="assets/images/icons/location.png"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </div>
+
+                          <span>
+                            المنطقة الصناعية قويسنا
+                            <br />
+                            مكتب بريد منطقة مبارك الصناعية
+                          </span>
+                        </li>
+                      </ul>
+
+                      <ul class="list">
+                        <li>
+                          <img
+                            src="assets/images/icons/date.svg"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span class="data"> التاريخ </span>
+
+                          <span class="name"> 13 Jan, 2025 - 01:13 AM </span>
+                        </li>
+
+                        <li>
+                          <img
+                            src="assets/images/icons/distance.png"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span class="data"> المسافة / كم </span>
+
+                          <span class="name"> 446.805 / كم </span>
+                        </li>
+
+                        <li>
+                          <img
+                            src="assets/images/icons/service.png"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span class="data"> الخدمة </span>
+
+                          <span class="name"> فردانى فرش </span>
+                        </li>
+
+                        <li>
+                          <img
+                            src="assets/images/icons/driver.png"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span class="data"> اسم السائق </span>
+
+                          <span class="name"> عبد الله محمد </span>
+                        </li>
+
+                        <li>
+                          <img
+                            src="assets/images/icons/dollar.png"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span class="data"> السعر </span>
+
+                          <span class="name"> 13,300 </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button
+                        class="btn btn-block text-left collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <div class="flex-data">
+                          <a href="#" class="link">
+                            <img
+                              src="assets/images/transiction/link.svg"
+                              loading="lazy"
+                              alt=""
+                              class="icon"
+                            />
+
+                            <span> #627130 </span>
+                          </a>
+
+                          <div class="link dark-link">
+                            <img
+                              src="assets/images/icons/date.svg"
+                              loading="lazy"
+                              alt=""
+                            />
+
+                            <span> منذ أسبوع </span>
+                          </div>
+
+                          <span class="status new"> جديدة </span>
+                        </div>
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    id="collapseTwo"
+                    class="collapse"
+                    aria-labelledby="headingTwo"
+                    data-parent="#accordionExample"
+                  >
+                    <div class="card-body">
+                      <h2 class="data-title">بيانات الرحلة</h2>
+
+                      <ul class="location-list">
+                        <li>
+                          <div class="icon">
+                            <img
+                              src="assets/images/icons/package.png"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </div>
+
+                          <span>
+                            المنطقة الصناعية قويسنا
+                            <br />
+                            مكتب بريد منطقة مبارك الصناعية
+                          </span>
+                        </li>
+
+                        <li>
+                          <div class="icon">
+                            <img
+                              src="assets/images/icons/location.png"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </div>
+
+                          <span>
+                            المنطقة الصناعية قويسنا
+                            <br />
+                            مكتب بريد منطقة مبارك الصناعية
+                          </span>
+                        </li>
+                      </ul>
+
+                      <ul class="list">
+                        <li>
+                          <img
+                            src="assets/images/icons/date.svg"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span class="data"> التاريخ </span>
+
+                          <span class="name"> 13 Jan, 2025 - 01:13 AM </span>
+                        </li>
+
+                        <li>
+                          <img
+                            src="assets/images/icons/distance.png"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span class="data"> المسافة / كم </span>
+
+                          <span class="name"> 446.805 / كم </span>
+                        </li>
+
+                        <li>
+                          <img
+                            src="assets/images/icons/service.png"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span class="data"> الخدمة </span>
+
+                          <span class="name"> فردانى فرش </span>
+                        </li>
+
+                        <li>
+                          <img
+                            src="assets/images/icons/driver.png"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span class="data"> اسم السائق </span>
+
+                          <span class="name"> عبد الله محمد </span>
+                        </li>
+
+                        <li>
+                          <img
+                            src="assets/images/icons/dollar.png"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span class="data"> السعر </span>
+
+                          <span class="name"> 13,300 </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <button
+                      class="btn btn-block text-left collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      <div class="flex-data">
+                        <a href="#" class="link">
+                          <img
+                            src="assets/images/transiction/link.svg"
+                            loading="lazy"
+                            alt=""
+                            class="icon"
+                          />
+
+                          <span> #627130 </span>
+                        </a>
+
+                        <div class="link dark-link">
+                          <img
+                            src="assets/images/icons/date.svg"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span> منذ أسبوع </span>
+                        </div>
+
+                        <span class="status red"> ملغي </span>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    id="collapseThree"
+                    class="collapse"
+                    aria-labelledby="headingThree"
+                    data-parent="#accordionExample"
+                  >
+                    <div class="card-body">
+                      <h2 class="data-title">بيانات الرحلة</h2>
+
+                      <ul class="location-list">
+                        <li>
+                          <div class="icon">
+                            <img
+                              src="assets/images/icons/package.png"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </div>
+
+                          <span>
+                            المنطقة الصناعية قويسنا
+                            <br />
+                            مكتب بريد منطقة مبارك الصناعية
+                          </span>
+                        </li>
+
+                        <li>
+                          <div class="icon">
+                            <img
+                              src="assets/images/icons/location.png"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </div>
+
+                          <span>
+                            المنطقة الصناعية قويسنا
+                            <br />
+                            مكتب بريد منطقة مبارك الصناعية
+                          </span>
+                        </li>
+                      </ul>
+
+                      <ul class="list">
+                        <li>
+                          <img
+                            src="assets/images/icons/date.svg"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span class="data"> التاريخ </span>
+
+                          <span class="name"> 13 Jan, 2025 - 01:13 AM </span>
+                        </li>
+
+                        <li>
+                          <img
+                            src="assets/images/icons/distance.png"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span class="data"> المسافة / كم </span>
+
+                          <span class="name"> 446.805 / كم </span>
+                        </li>
+
+                        <li>
+                          <img
+                            src="assets/images/icons/service.png"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span class="data"> الخدمة </span>
+
+                          <span class="name"> فردانى فرش </span>
+                        </li>
+
+                        <li>
+                          <img
+                            src="assets/images/icons/driver.png"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span class="data"> اسم السائق </span>
+
+                          <span class="name"> عبد الله محمد </span>
+                        </li>
+
+                        <li>
+                          <img
+                            src="assets/images/icons/dollar.png"
+                            loading="lazy"
+                            alt=""
+                          />
+
+                          <span class="data"> السعر </span>
+
+                          <span class="name"> 13,300 </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <ul class="pagination-list">
+                  <li>
+                    <a href="#" class="active"> 1 </a>
+                  </li>
+
+                  <li>
+                    <a href="#"> 2 </a>
+                  </li>
+
+                  <li>
+                    <a href="#"> 3 </a>
+                  </li>
+
+                  <li>...</li>
+
+                  <li>
+                    <a href="#"> 9 </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="filter-tabs">
-        <a href="#" class="box active">
-          <img src="assets/images/transiction/all.svg" loading="lazy" alt="" />
-
-          <div class="data">
-            <span> الكل </span>
-
-            <h2>3,210</h2>
-          </div>
-        </a>
-
-        <a href="#" class="box">
-          <img
-            src="assets/images/transiction/new_status.svg"
-            loading="lazy"
-            alt=""
-          />
-
-          <div class="data">
-            <span> جديد </span>
-
-            <h2>2,100</h2>
-          </div>
-        </a>
-
-        <a href="#" class="box">
-          <img
-            src="assets/images/transiction/succeeded.svg"
-            loading="lazy"
-            alt=""
-          />
-
-          <div class="data">
-            <span> مكتمل </span>
-
-            <h2>100</h2>
-          </div>
-        </a>
-
-        <a href="#" class="box">
-          <img
-            src="assets/images/transiction/disputed.svg"
-            loading="lazy"
-            alt=""
-          />
-
-          <div class="data">
-            <span> قيد الانتظار </span>
-
-            <h2>0</h2>
-          </div>
-        </a>
-
-        <a href="#" class="box">
-          <img
-            src="assets/images/transiction/refunded.svg"
-            loading="lazy"
-            alt=""
-          />
-
-          <div class="data">
-            <span> مقبول </span>
-
-            <h2>25</h2>
-          </div>
-        </a>
-
-        <a href="#" class="box">
-          <img
-            src="assets/images/transiction/failed.svg"
-            loading="lazy"
-            alt=""
-          />
-
-          <div class="data">
-            <span> ملغي </span>
-
-            <h2>210</h2>
-          </div>
-        </a>
-      </div>
-
-      <div class="table-responsive">
-        <table>
-          <thead>
-            <tr>
-              <th># المعرّف</th>
-
-              <th>تاريخ الإنشاء</th>
-
-              <th>من</th>
-
-              <th>إلى</th>
-
-              <th>التاريخ</th>
-
-              <th>المسافة / كم</th>
-
-              <th>الخدمة</th>
-
-              <th>اسم السائق</th>
-
-              <th>السعر</th>
-
-              <th>الحالة</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr class="row-data">
-              <td>
-                <a href="#" class="link">
-                  <img
-                    src="assets/images/transiction/link.svg"
-                    loading="lazy"
-                    alt=""
-                    class="icon"
-                  />
-
-                  <span> #627130 </span>
-                </a>
-              </td>
-
-              <td>
-                <div class="link dark-link">
-                  <img
-                    src="assets/images/icons/date.svg"
-                    loading="lazy"
-                    alt=""
-                  />
-
-                  <span>
-                    منذ أسبوع
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>13 Jan, 2025 - 01:13 AM</td>
-
-              <td>
-                446.805	/ كم 
-              </td>
-
-              <td>
-                فردانى فرش	
-              </td>
-
-              <td>
-                - 
-              </td>
-
-              <td>
-                13,300
-              </td>
-
-              <td>
-                <span class="status success"> مكتمل </span>
-              </td>
-            </tr>
-
-            <tr class="row-data">
-              <td>
-                <a href="#" class="link">
-                  <img
-                    src="assets/images/transiction/link.svg"
-                    loading="lazy"
-                    alt=""
-                    class="icon"
-                  />
-
-                  <span> #627130 </span>
-                </a>
-              </td>
-
-              <td>
-                <div class="link dark-link">
-                  <img
-                    src="assets/images/icons/date.svg"
-                    loading="lazy"
-                    alt=""
-                  />
-
-                  <span>
-                    منذ أسبوع
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>13 Jan, 2025 - 01:13 AM</td>
-
-              <td>
-                446.805	/ كم 
-              </td>
-
-              <td>
-                فردانى فرش	
-              </td>
-
-              <td>
-                - 
-              </td>
-
-              <td>
-                13,300
-              </td>
-
-              <td>
-                <span class="status red"> تم الالغاء بواسطة السائق </span>
-              </td>
-            </tr>
-
-            <tr class="row-data">
-              <td>
-                <a href="#" class="link">
-                  <img
-                    src="assets/images/transiction/link.svg"
-                    loading="lazy"
-                    alt=""
-                    class="icon"
-                  />
-
-                  <span> #627130 </span>
-                </a>
-              </td>
-
-              <td>
-                <div class="link dark-link">
-                  <img
-                    src="assets/images/icons/date.svg"
-                    loading="lazy"
-                    alt=""
-                  />
-
-                  <span>
-                    منذ أسبوع
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>13 Jan, 2025 - 01:13 AM</td>
-
-              <td>
-                446.805	/ كم 
-              </td>
-
-              <td>
-                فردانى فرش	
-              </td>
-
-              <td>
-                - 
-              </td>
-
-              <td>
-                13,300
-              </td>
-
-              <td>
-                <span class="status accepted"> مقبول </span>
-              </td>
-            </tr>
-
-            <tr class="row-data">
-              <td>
-                <a href="#" class="link">
-                  <img
-                    src="assets/images/transiction/link.svg"
-                    loading="lazy"
-                    alt=""
-                    class="icon"
-                  />
-
-                  <span> #627130 </span>
-                </a>
-              </td>
-
-              <td>
-                <div class="link dark-link">
-                  <img
-                    src="assets/images/icons/date.svg"
-                    loading="lazy"
-                    alt=""
-                  />
-
-                  <span>
-                    منذ أسبوع
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>13 Jan, 2025 - 01:13 AM</td>
-
-              <td>
-                446.805	/ كم 
-              </td>
-
-              <td>
-                فردانى فرش	
-              </td>
-
-              <td>
-                - 
-              </td>
-
-              <td>
-                13,300
-              </td>
-
-              <td>
-                <span class="status new"> مقبول </span>
-              </td>
-            </tr>
-
-            <tr class="row-data">
-              <td>
-                <a href="#" class="link">
-                  <img
-                    src="assets/images/transiction/link.svg"
-                    loading="lazy"
-                    alt=""
-                    class="icon"
-                  />
-
-                  <span> #627130 </span>
-                </a>
-              </td>
-
-              <td>
-                <div class="link dark-link">
-                  <img
-                    src="assets/images/icons/date.svg"
-                    loading="lazy"
-                    alt=""
-                  />
-
-                  <span>
-                    منذ أسبوع
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>13 Jan, 2025 - 01:13 AM</td>
-
-              <td>
-                446.805	/ كم 
-              </td>
-
-              <td>
-                فردانى فرش	
-              </td>
-
-              <td>
-                - 
-              </td>
-
-              <td>
-                13,300
-              </td>
-
-              <td>
-                <span class="status incomplete"> قيد الانتظار </span>
-              </td>
-            </tr>
-
-            <tr class="row-data">
-              <td>
-                <a href="#" class="link">
-                  <img
-                    src="assets/images/transiction/link.svg"
-                    loading="lazy"
-                    alt=""
-                    class="icon"
-                  />
-
-                  <span> #627130 </span>
-                </a>
-              </td>
-
-              <td>
-                <div class="link dark-link">
-                  <img
-                    src="assets/images/icons/date.svg"
-                    loading="lazy"
-                    alt=""
-                  />
-
-                  <span>
-                    منذ أسبوع
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>13 Jan, 2025 - 01:13 AM</td>
-
-              <td>
-                446.805	/ كم 
-              </td>
-
-              <td>
-                فردانى فرش	
-              </td>
-
-              <td>
-                - 
-              </td>
-
-              <td>
-                13,300
-              </td>
-
-              <td>
-                <span class="status success"> مكتمل </span>
-              </td>
-            </tr>
-
-            <tr class="row-data">
-              <td>
-                <a href="#" class="link">
-                  <img
-                    src="assets/images/transiction/link.svg"
-                    loading="lazy"
-                    alt=""
-                    class="icon"
-                  />
-
-                  <span> #627130 </span>
-                </a>
-              </td>
-
-              <td>
-                <div class="link dark-link">
-                  <img
-                    src="assets/images/icons/date.svg"
-                    loading="lazy"
-                    alt=""
-                  />
-
-                  <span>
-                    منذ أسبوع
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>13 Jan, 2025 - 01:13 AM</td>
-
-              <td>
-                446.805	/ كم 
-              </td>
-
-              <td>
-                فردانى فرش	
-              </td>
-
-              <td>
-                - 
-              </td>
-
-              <td>
-                13,300
-              </td>
-
-              <td>
-                <span class="status red"> تم الالغاء بواسطة السائق </span>
-              </td>
-            </tr>
-
-            <tr class="row-data">
-              <td>
-                <a href="#" class="link">
-                  <img
-                    src="assets/images/transiction/link.svg"
-                    loading="lazy"
-                    alt=""
-                    class="icon"
-                  />
-
-                  <span> #627130 </span>
-                </a>
-              </td>
-
-              <td>
-                <div class="link dark-link">
-                  <img
-                    src="assets/images/icons/date.svg"
-                    loading="lazy"
-                    alt=""
-                  />
-
-                  <span>
-                    منذ أسبوع
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>13 Jan, 2025 - 01:13 AM</td>
-
-              <td>
-                446.805	/ كم 
-              </td>
-
-              <td>
-                فردانى فرش	
-              </td>
-
-              <td>
-                - 
-              </td>
-
-              <td>
-                13,300
-              </td>
-
-              <td>
-                <span class="status accepted"> مقبول </span>
-              </td>
-            </tr>
-
-            <tr class="row-data">
-              <td>
-                <a href="#" class="link">
-                  <img
-                    src="assets/images/transiction/link.svg"
-                    loading="lazy"
-                    alt=""
-                    class="icon"
-                  />
-
-                  <span> #627130 </span>
-                </a>
-              </td>
-
-              <td>
-                <div class="link dark-link">
-                  <img
-                    src="assets/images/icons/date.svg"
-                    loading="lazy"
-                    alt=""
-                  />
-
-                  <span>
-                    منذ أسبوع
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>13 Jan, 2025 - 01:13 AM</td>
-
-              <td>
-                446.805	/ كم 
-              </td>
-
-              <td>
-                فردانى فرش	
-              </td>
-
-              <td>
-                - 
-              </td>
-
-              <td>
-                13,300
-              </td>
-
-              <td>
-                <span class="status new"> مقبول </span>
-              </td>
-            </tr>
-
-            <tr class="row-data">
-              <td>
-                <a href="#" class="link">
-                  <img
-                    src="assets/images/transiction/link.svg"
-                    loading="lazy"
-                    alt=""
-                    class="icon"
-                  />
-
-                  <span> #627130 </span>
-                </a>
-              </td>
-
-              <td>
-                <div class="link dark-link">
-                  <img
-                    src="assets/images/icons/date.svg"
-                    loading="lazy"
-                    alt=""
-                  />
-
-                  <span>
-                    منذ أسبوع
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>
-                <div class="block-data">
-                  <b>
-                    المنطقة الصناعية قويسنا
-                  </b>
-
-                  <span>
-                    مكتب بريد منطقة مبارك الصناعية	
-                  </span>
-                </div>
-              </td>
-
-              <td>13 Jan, 2025 - 01:13 AM</td>
-
-              <td>
-                446.805	/ كم 
-              </td>
-
-              <td>
-                فردانى فرش	
-              </td>
-
-              <td>
-                - 
-              </td>
-
-              <td>
-                13,300
-              </td>
-
-              <td>
-                <span class="status incomplete"> قيد الانتظار </span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- <div class="no-data-table">
-          No Data Yet!
-        </div> -->
-      </div>
-
-      <ul class="pagination-list">
-        <li>
-          <a href="#" class="active"> 1 </a>
-        </li>
-
-        <li>
-          <a href="#"> 2 </a>
-        </li>
-
-        <li>
-          <a href="#"> 3 </a>
-        </li>
-
-        <li>...</li>
-
-        <li>
-          <a href="#"> 9 </a>
-        </li>
-      </ul>
     </main>
 
     <!--Transactions modal-->
