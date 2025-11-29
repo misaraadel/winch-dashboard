@@ -605,6 +605,7 @@
     padding: 15px 15px;
     background-color: var(--light-color);
     border-radius: 10px;
+    @include topBottomShadow();
 
     &.large-nav {
       margin-top: 60px;
@@ -1837,6 +1838,7 @@
     padding: 20px 15px;
     background-color: var(--light-color);
     border-radius: 10px;
+    @include topBottomShadow();
   }
 
   .no-data-table {

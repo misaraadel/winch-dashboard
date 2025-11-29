@@ -1097,6 +1097,7 @@ html[dir=rtl] .side-nav {
   padding: 15px 15px;
   background-color: var(--light-color);
   border-radius: 10px;
+  box-shadow: 0px 12px 32px rgba(112, 144, 176, 0.12), 0px -12px 32px rgba(112, 144, 176, 0.08);
 }
 .dashboard-contain .navbar-nav.large-nav {
   margin-top: 60px;
@@ -2231,6 +2232,7 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   padding: 20px 15px;
   background-color: var(--light-color);
   border-radius: 10px;
+  box-shadow: 0px 12px 32px rgba(112, 144, 176, 0.12), 0px -12px 32px rgba(112, 144, 176, 0.08);
 }
 .dashboard-contain .no-data-table {
   width: 100%;
