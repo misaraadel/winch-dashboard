@@ -11,7 +11,7 @@
 }
 @font-face {
   font-family: "Cairo";
-  src: url("../fonts/Cairo/Cairo-Black.ttf");
+  src: url("../fonts/Cairo/Cairo-Bold.ttf");
   font-weight: 900;
 }
 * {
@@ -1097,7 +1097,7 @@ html[dir=rtl] .side-nav {
   padding: 15px 15px;
   background-color: var(--light-color);
   border-radius: 10px;
-  box-shadow: 0px 12px 32px rgba(112, 144, 176, 0.12), 0px -12px 32px rgba(112, 144, 176, 0.08);
+  box-shadow: 0px 12px 15px rgba(112, 144, 176, 0.12), 0px -12px 15px rgba(112, 144, 176, 0.08);
 }
 .dashboard-contain .navbar-nav.large-nav {
   margin-top: 60px;
@@ -1223,7 +1223,7 @@ html[dir=rtl] .side-nav {
   margin-bottom: 0px !important;
 }
 .dashboard-contain .page-name {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 700;
   color: var(--dark-color);
   margin-bottom: 40px;
@@ -2232,7 +2232,7 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   padding: 20px 15px;
   background-color: var(--light-color);
   border-radius: 10px;
-  box-shadow: 0px 12px 32px rgba(112, 144, 176, 0.12), 0px -12px 32px rgba(112, 144, 176, 0.08);
+  box-shadow: 0px 12px 15px rgba(112, 144, 176, 0.12), 0px -12px 15px rgba(112, 144, 176, 0.08);
 }
 .dashboard-contain .no-data-table {
   width: 100%;
@@ -2266,11 +2266,26 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
 }
 .dashboard-contain .accordion .card .card-header button {
   width: 100%;
-  padding: 15px 12px;
+  padding: 24px 26px;
   gap: 10px;
   position: relative;
+  flex-wrap: wrap;
   z-index: 9;
   padding-inline-end: 40px;
+}
+.dashboard-contain .accordion .card .card-header button .flex-data-between {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.dashboard-contain .accordion .card .card-header button .flex-data-between.end-data {
+  align-items: flex-end;
+  align-content: flex-end;
+}
+.dashboard-contain .accordion .card .card-header button .flex-data-between:last-child {
+  margin-bottom: 0px;
 }
 .dashboard-contain .accordion .card .card-header button::after {
   content: "";
@@ -2284,18 +2299,132 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   pointer-events: none;
   filter: var(--primary-filter);
 }
+.dashboard-contain .accordion .card .card-header button .flex-end-data {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-inline-start: auto;
+}
+.dashboard-contain .accordion .card .card-header button .flex-end-data .link {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.dashboard-contain .accordion .card .card-header button .flex-end-data .link.data-price .name {
+  font-size: 27px;
+  font-weight: 900;
+  color: var(--primary-color);
+}
+.dashboard-contain .accordion .card .card-header button .flex-end-data .link.data-price .data {
+  color: var(--primary-color);
+  font-size: 18px;
+}
+.dashboard-contain .accordion .card .card-header button .flex-end-data .link.dark-link img {
+  filter: none !important;
+}
+.dashboard-contain .accordion .card .card-header button .flex-end-data .link img {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: var(--primary-filter);
+}
+.dashboard-contain .accordion .card .card-header button .flex-end-data .link span {
+  color: var(--dark-color);
+  font-size: 15px;
+  font-weight: 500;
+}
+.dashboard-contain .accordion .card .card-header button .location-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+}
+.dashboard-contain .accordion .card .card-header button .location-list::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  border-left: 1px dashed #e7eded;
+  top: calc(50% - 15px);
+  right: 10px;
+  z-index: -1;
+}
+.dashboard-contain .accordion .card .card-header button .location-list li {
+  position: relative;
+  z-index: 9;
+  width: calc(50% - 15px);
+  display: flex;
+  align-content: center;
+  align-items: center;
+  align-items: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 15px;
+}
+.dashboard-contain .accordion .card .card-header button .location-list li:last-child::after {
+  display: none;
+}
+.dashboard-contain .accordion .card .card-header button .location-list li .icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.dashboard-contain .accordion .card .card-header button .location-list li .icon img {
+  width: 10px;
+  height: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: var(--light-filter);
+}
+.dashboard-contain .accordion .card .card-header button .location-list li span {
+  width: calc(100% - 20px);
+  color: var(--dark-color);
+  text-align: start;
+  font-size: 18px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.dashboard-contain .accordion .card .card-header button .location-list li span.desc {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--gray-color);
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .dashboard-contain .accordion .card .card-header button .flex-data {
   display: flex;
   align-content: center;
   align-items: center;
   gap: 15px;
-  width: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.dashboard-contain .accordion .card .card-header button .flex-data.column-data {
+  flex-direction: column;
+  align-items: flex-end;
 }
 .dashboard-contain .accordion .card .card-header button .flex-data .link {
   display: flex;
   align-content: center;
   align-items: center;
   gap: 5px;
+}
+.dashboard-contain .accordion .card .card-header button .flex-data .link.data-price span {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--primary-color);
 }
 .dashboard-contain .accordion .card .card-header button .flex-data .link.dark-link img {
   filter: none !important;
@@ -2308,12 +2437,18 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   filter: var(--primary-filter);
 }
 .dashboard-contain .accordion .card .card-header button .flex-data .link span {
-  color: var(--dark-color);
+  color: #909090;
   font-size: 15px;
   font-weight: 500;
+  white-space: nowrap;
+}
+.dashboard-contain .accordion .card .card-header button .flex-data .link span.date {
+  color: var(--dark-color) !important;
+  font-size: 18px;
 }
 .dashboard-contain .accordion .card .card-header button .status {
   float: right;
+  border-radius: 50px;
   margin-inline-start: auto;
 }
 .dashboard-contain .accordion .card .card-body {
@@ -3226,7 +3361,7 @@ html[dir=rtl] .form-contain .form-group .icon {
   align-items: center;
   align-content: center;
   justify-content: center;
-  box-shadow: 0px 12px 32px rgba(112, 144, 176, 0.12), 0px -12px 32px rgba(112, 144, 176, 0.08);
+  box-shadow: 0px 12px 15px rgba(112, 144, 176, 0.12), 0px -12px 15px rgba(112, 144, 176, 0.08);
   text-align: center;
 }
 @media (max-width: 992px) {
@@ -3524,7 +3659,7 @@ html[dir=rtl] .login .back-btn img {
   border-radius: 15px;
   overflow: hidden;
   z-index: 9;
-  box-shadow: 0px 12px 32px rgba(112, 144, 176, 0.12), 0px -12px 32px rgba(112, 144, 176, 0.08);
+  box-shadow: 0px 12px 15px rgba(112, 144, 176, 0.12), 0px -12px 15px rgba(112, 144, 176, 0.08);
 }
 .login .form-contain .error-message {
   position: relative;
@@ -4003,7 +4138,7 @@ html[dir=rtl] .login .search-input img {
 .login .links-contain.white-bk {
   background-color: var(--light-color);
   padding: 40px;
-  box-shadow: 0px 12px 32px rgba(112, 144, 176, 0.12), 0px -12px 32px rgba(112, 144, 176, 0.08);
+  box-shadow: 0px 12px 15px rgba(112, 144, 176, 0.12), 0px -12px 15px rgba(112, 144, 176, 0.08);
   border-radius: 20px;
 }
 @media (max-width: 992px) {

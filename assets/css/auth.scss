@@ -80,8 +80,8 @@
 }
 
 @mixin topBottomShadow {
-  box-shadow: 0px 12px 32px rgba($color: #7090b0, $alpha: 0.12),
-    0px -12px 32px rgba($color: #7090b0, $alpha: 0.08);
+  box-shadow: 0px 12px 15px rgba($color: #7090b0, $alpha: 0.12),
+    0px -12px 15px rgba($color: #7090b0, $alpha: 0.08);
 }
 @mixin blackShadow {
   box-shadow: 0px 2px 25px rgba($color: #0d50e5, $alpha: 0.1);
@@ -740,7 +740,7 @@
   }
 
   .page-name {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--dark-color);
     margin-bottom: 40px;
@@ -1871,11 +1871,26 @@
 
         button {
           width: 100%;
-          padding: 15px 12px;
+          padding: 24px 26px;
           gap: 10px;
           position: relative;
+          flex-wrap: wrap;
           z-index: 9;
           padding-inline-end: 40px;
+
+          .flex-data-between {
+            @include flexBetween();
+            margin-bottom: 20px;
+
+            &.end-data {
+              align-items: flex-end;
+              align-content: flex-end;
+            }
+
+            &:last-child {
+              margin-bottom: 0px;
+            }
+          }
 
           &::after {
             content: "";
@@ -1891,14 +1906,27 @@
             filter: var(--primary-filter);
           }
 
-          .flex-data {
+          .flex-end-data {
             @include flexData();
             gap: 15px;
-            width: 100%;
+            margin-inline-start: auto;
 
             .link {
               @include flexData();
               gap: 5px;
+
+              &.data-price {
+                .name {
+                  font-size: 27px;
+                  font-weight: 900;
+                  color: var(--primary-color);
+                }
+
+                .data {
+                  color: var(--primary-color);
+                  font-size: 18px;
+                }
+              }
 
               &.dark-link {
                 img {
@@ -1921,8 +1949,125 @@
             }
           }
 
+          .location-list {
+            @include flexColumnCenter();
+            gap: 20px;
+            width: 100%;
+            position: relative;
+            z-index: 9;
+
+            &::after {
+              content: "";
+              position: absolute;
+              width: 1px;
+              height: 20px;
+              border-left: 1px dashed #e7eded;
+              top: calc(50% - 15px);
+              right: 10px;
+              z-index: -1;
+            }
+
+            li {
+              position: relative;
+              z-index: 9;
+              width: calc((100% / 2) - 15px);
+              @include flexData();
+              align-items: flex-start;
+              align-items: center;
+              align-content: center;
+              gap: 15px;
+
+              &:last-child::after {
+                display: none;
+              }
+
+              .icon {
+                width: 20px;
+                height: 20px;
+                flex-shrink: 0;  
+                background-color: var(--primary-color);
+                border-radius: 50%;
+                @include flexCenter();
+
+                img {
+                  width: 10px;
+                  height: 10px;
+                  object-fit: contain;
+                  filter: var(--light-filter);
+                }
+              }
+
+              span {
+                width: calc(100% - 20px);
+                color: var(--dark-color);
+                text-align: start;
+                font-size: 18px;
+                font-weight: 900;
+                 white-space: nowrap;
+
+                &.desc {
+                  font-size: 17px;
+                  font-weight: 500;
+                  color: var(--gray-color);
+                  width: fit-content;
+                }
+              }
+            }
+          }
+
+          .flex-data {
+            @include flexData();
+            gap: 15px;
+            width: fit-content;
+
+            &.column-data {
+              flex-direction: column;
+              align-items: flex-end;
+            }
+
+            .link {
+              @include flexData();
+              gap: 5px;
+
+              &.data-price {
+                span {
+                  font-size: 25px;
+                  font-weight: 700;
+                  color: var(--primary-color);
+                }
+              }
+
+              &.dark-link {
+                img {
+                  filter: none !important;
+                }
+              }
+
+              img {
+                width: 24px;
+                height: 24px;
+                object-fit: contain;
+                filter: var(--primary-filter);
+              }
+
+              span {
+                color: #909090;
+                font-size: 15px;
+                font-weight: 500;
+                white-space: nowrap;
+
+                &.date {
+                  color: var(--dark-color) !important;
+                  font-size: 18px;
+                }
+              }
+              
+            }
+          }
+
           .status {
             float: right;
+            border-radius: 50px;
             margin-inline-start: auto;
           }
         }
@@ -1977,7 +2122,6 @@
               border-radius: 50%;
               @include flexCenter();
 
-
               img {
                 width: 18px;
                 height: 18px;
@@ -1989,7 +2133,7 @@
             span {
               color: var(--dark-color);
               font-size: 15px;
-              font-weight: 500;           
+              font-weight: 500;
               text-align: center;
             }
           }
