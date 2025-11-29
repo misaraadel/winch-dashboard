@@ -645,6 +645,11 @@ input[type=number]::-webkit-outer-spin-button {
     brightness(87%) contrast(97%);
 }
 
+.container-shape {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .custom-btn {
   width: 140px;
   height: 48px;
