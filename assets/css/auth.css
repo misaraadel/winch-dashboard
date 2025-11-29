@@ -1149,7 +1149,7 @@ html[dir=rtl] .side-nav {
 }
 .dashboard-contain .navbar-nav .nav-item .nav-link span {
   color: var(--gray-color);
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 700;
   text-transform: capitalize;
 }
@@ -2209,13 +2209,13 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
 }
 .dashboard-contain .filter-tabs .box .data span {
   color: var(--gray-color);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   display: block;
   margin-top: 5px;
 }
 .dashboard-contain .filter-tabs .box .data h2 {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--dark-color);
   margin: 0px;
