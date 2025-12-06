@@ -1816,8 +1816,8 @@
         }
 
         h2 {
-          font-size: 20px;
-          font-weight: 700;
+          font-size: 27px;
+          font-weight: 900;
           color: var(--dark-color);
           margin: 0px;
         }
@@ -1853,7 +1853,7 @@
     border: 1px dashed #d7dcdc;
   }
 
-  .accordion {
+  .accordion-data {
     width: 100%;
 
     .card {
@@ -1869,14 +1869,13 @@
         border-bottom: 1px solid #e7eded;
         border-radius: 0px;
 
-        button {
+        a {
           width: 100%;
           padding: 24px 26px;
           gap: 10px;
           position: relative;
           flex-wrap: wrap;
           z-index: 9;
-          padding-inline-end: 40px;
 
           .flex-data-between {
             @include flexBetween();
@@ -1890,20 +1889,6 @@
             &:last-child {
               margin-bottom: 0px;
             }
-          }
-
-          &::after {
-            content: "";
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            background: url("../images/icons/down-arrow.svg") center / contain
-              no-repeat;
-            top: 15px;
-            left: 10px;
-            z-index: 9;
-            pointer-events: none;
-            filter: var(--primary-filter);
           }
 
           .flex-end-data {
@@ -2027,7 +2012,7 @@
 
             .link {
               @include flexData();
-              gap: 5px;
+              gap: 15px;
 
               &.data-price {
                 span {
@@ -2069,6 +2054,20 @@
             float: right;
             border-radius: 50px;
             margin-inline-start: auto;
+          }
+
+          .accept-img{
+            width: 70px;
+            height: 70px;
+            border: 1px solid #e7eded;
+            border-radius: 50%;
+            overflow: hidden;
+            padding: 5px;
+  
+            img {
+              @include imageCover();
+              border-radius: 50%;
+            }
           }
         }
       }
@@ -2178,30 +2177,36 @@
         border-radius: 5px;
         display: block;
         width: fit-content;
+        border: 1px solid;
 
         &.success {
           background-color: #e9faef;
           color: #34c759;
+          border-color: rgba($color: #34c759, $alpha: 0.40);
         }
 
         &.red {
           background-color: #fbeae4;
           color: #e22900;
+          border-color: rgba($color: #e22900, $alpha: 0.40);
         }
 
         &.incomplete {
           background-color: #f7f9f9;
           color: #b5b9b9;
+          border-color: rgba($color: #b5b9b9, $alpha: 0.40);
         }
 
         &.accepted {
           background-color: rgba($color: #ff8d28, $alpha: 0.1);
           color: #ff8d28;
+          border-color: rgba($color: #ff8d28, $alpha: 0.40);
         }
 
         &.new {
           background-color: #e9f6ff;
           color: #26a0fc;
+          border-color: rgba($color: #26a0fc, $alpha: 0.40);
         }
       }
     }

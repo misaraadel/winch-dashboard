@@ -2216,8 +2216,8 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   margin-top: 5px;
 }
 .dashboard-contain .filter-tabs .box .data h2 {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 27px;
+  font-weight: 900;
   color: var(--dark-color);
   margin: 0px;
 }
@@ -2248,95 +2248,82 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   border-radius: 20px;
   border: 1px dashed #d7dcdc;
 }
-.dashboard-contain .accordion {
+.dashboard-contain .accordion-data {
   width: 100%;
 }
-.dashboard-contain .accordion .card {
+.dashboard-contain .accordion-data .card {
   margin-bottom: 20px;
   border: 1px solid #e7eded;
   background-color: var(--light-color);
   border-radius: 10px;
 }
-.dashboard-contain .accordion .card .card-header {
+.dashboard-contain .accordion-data .card .card-header {
   padding: 0px;
   margin: 0px;
   background-color: transparent;
   border-bottom: 1px solid #e7eded;
   border-radius: 0px;
 }
-.dashboard-contain .accordion .card .card-header button {
+.dashboard-contain .accordion-data .card .card-header a {
   width: 100%;
   padding: 24px 26px;
   gap: 10px;
   position: relative;
   flex-wrap: wrap;
   z-index: 9;
-  padding-inline-end: 40px;
 }
-.dashboard-contain .accordion .card .card-header button .flex-data-between {
+.dashboard-contain .accordion-data .card .card-header a .flex-data-between {
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-.dashboard-contain .accordion .card .card-header button .flex-data-between.end-data {
+.dashboard-contain .accordion-data .card .card-header a .flex-data-between.end-data {
   align-items: flex-end;
   align-content: flex-end;
 }
-.dashboard-contain .accordion .card .card-header button .flex-data-between:last-child {
+.dashboard-contain .accordion-data .card .card-header a .flex-data-between:last-child {
   margin-bottom: 0px;
 }
-.dashboard-contain .accordion .card .card-header button::after {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  background: url("../images/icons/down-arrow.svg") center/contain no-repeat;
-  top: 15px;
-  left: 10px;
-  z-index: 9;
-  pointer-events: none;
-  filter: var(--primary-filter);
-}
-.dashboard-contain .accordion .card .card-header button .flex-end-data {
+.dashboard-contain .accordion-data .card .card-header a .flex-end-data {
   display: flex;
   align-content: center;
   align-items: center;
   gap: 15px;
   margin-inline-start: auto;
 }
-.dashboard-contain .accordion .card .card-header button .flex-end-data .link {
+.dashboard-contain .accordion-data .card .card-header a .flex-end-data .link {
   display: flex;
   align-content: center;
   align-items: center;
   gap: 5px;
 }
-.dashboard-contain .accordion .card .card-header button .flex-end-data .link.data-price .name {
+.dashboard-contain .accordion-data .card .card-header a .flex-end-data .link.data-price .name {
   font-size: 27px;
   font-weight: 900;
   color: var(--primary-color);
 }
-.dashboard-contain .accordion .card .card-header button .flex-end-data .link.data-price .data {
+.dashboard-contain .accordion-data .card .card-header a .flex-end-data .link.data-price .data {
   color: var(--primary-color);
   font-size: 18px;
 }
-.dashboard-contain .accordion .card .card-header button .flex-end-data .link.dark-link img {
+.dashboard-contain .accordion-data .card .card-header a .flex-end-data .link.dark-link img {
   filter: none !important;
 }
-.dashboard-contain .accordion .card .card-header button .flex-end-data .link img {
+.dashboard-contain .accordion-data .card .card-header a .flex-end-data .link img {
   width: 24px;
   height: 24px;
   -o-object-fit: contain;
      object-fit: contain;
   filter: var(--primary-filter);
 }
-.dashboard-contain .accordion .card .card-header button .flex-end-data .link span {
+.dashboard-contain .accordion-data .card .card-header a .flex-end-data .link span {
   color: var(--dark-color);
   font-size: 15px;
   font-weight: 500;
 }
-.dashboard-contain .accordion .card .card-header button .location-list {
+.dashboard-contain .accordion-data .card .card-header a .location-list {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -2345,7 +2332,7 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   position: relative;
   z-index: 9;
 }
-.dashboard-contain .accordion .card .card-header button .location-list::after {
+.dashboard-contain .accordion-data .card .card-header a .location-list::after {
   content: "";
   position: absolute;
   width: 1px;
@@ -2355,7 +2342,7 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   right: 10px;
   z-index: -1;
 }
-.dashboard-contain .accordion .card .card-header button .location-list li {
+.dashboard-contain .accordion-data .card .card-header a .location-list li {
   position: relative;
   z-index: 9;
   width: calc(50% - 15px);
@@ -2367,10 +2354,10 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   align-content: center;
   gap: 15px;
 }
-.dashboard-contain .accordion .card .card-header button .location-list li:last-child::after {
+.dashboard-contain .accordion-data .card .card-header a .location-list li:last-child::after {
   display: none;
 }
-.dashboard-contain .accordion .card .card-header button .location-list li .icon {
+.dashboard-contain .accordion-data .card .card-header a .location-list li .icon {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
@@ -2381,14 +2368,14 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   align-content: center;
   justify-content: center;
 }
-.dashboard-contain .accordion .card .card-header button .location-list li .icon img {
+.dashboard-contain .accordion-data .card .card-header a .location-list li .icon img {
   width: 10px;
   height: 10px;
   -o-object-fit: contain;
      object-fit: contain;
   filter: var(--light-filter);
 }
-.dashboard-contain .accordion .card .card-header button .location-list li span {
+.dashboard-contain .accordion-data .card .card-header a .location-list li span {
   width: calc(100% - 20px);
   color: var(--dark-color);
   text-align: start;
@@ -2396,14 +2383,14 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   font-weight: 900;
   white-space: nowrap;
 }
-.dashboard-contain .accordion .card .card-header button .location-list li span.desc {
+.dashboard-contain .accordion-data .card .card-header a .location-list li span.desc {
   font-size: 17px;
   font-weight: 500;
   color: var(--gray-color);
   width: -moz-fit-content;
   width: fit-content;
 }
-.dashboard-contain .accordion .card .card-header button .flex-data {
+.dashboard-contain .accordion-data .card .card-header a .flex-data {
   display: flex;
   align-content: center;
   align-items: center;
@@ -2411,57 +2398,72 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   width: -moz-fit-content;
   width: fit-content;
 }
-.dashboard-contain .accordion .card .card-header button .flex-data.column-data {
+.dashboard-contain .accordion-data .card .card-header a .flex-data.column-data {
   flex-direction: column;
   align-items: flex-end;
 }
-.dashboard-contain .accordion .card .card-header button .flex-data .link {
+.dashboard-contain .accordion-data .card .card-header a .flex-data .link {
   display: flex;
   align-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 15px;
 }
-.dashboard-contain .accordion .card .card-header button .flex-data .link.data-price span {
+.dashboard-contain .accordion-data .card .card-header a .flex-data .link.data-price span {
   font-size: 25px;
   font-weight: 700;
   color: var(--primary-color);
 }
-.dashboard-contain .accordion .card .card-header button .flex-data .link.dark-link img {
+.dashboard-contain .accordion-data .card .card-header a .flex-data .link.dark-link img {
   filter: none !important;
 }
-.dashboard-contain .accordion .card .card-header button .flex-data .link img {
+.dashboard-contain .accordion-data .card .card-header a .flex-data .link img {
   width: 24px;
   height: 24px;
   -o-object-fit: contain;
      object-fit: contain;
   filter: var(--primary-filter);
 }
-.dashboard-contain .accordion .card .card-header button .flex-data .link span {
+.dashboard-contain .accordion-data .card .card-header a .flex-data .link span {
   color: #909090;
   font-size: 15px;
   font-weight: 500;
   white-space: nowrap;
 }
-.dashboard-contain .accordion .card .card-header button .flex-data .link span.date {
+.dashboard-contain .accordion-data .card .card-header a .flex-data .link span.date {
   color: var(--dark-color) !important;
   font-size: 18px;
 }
-.dashboard-contain .accordion .card .card-header button .status {
+.dashboard-contain .accordion-data .card .card-header a .status {
   float: right;
   border-radius: 50px;
   margin-inline-start: auto;
 }
-.dashboard-contain .accordion .card .card-body {
+.dashboard-contain .accordion-data .card .card-header a .accept-img {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #e7eded;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 5px;
+}
+.dashboard-contain .accordion-data .card .card-header a .accept-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.dashboard-contain .accordion-data .card .card-body {
   width: 100%;
   padding: 15px 10px;
 }
-.dashboard-contain .accordion .card .card-body .data-title {
+.dashboard-contain .accordion-data .card .card-body .data-title {
   font-size: 30px;
   font-weight: 700;
   color: var(--dark-color);
   margin-bottom: 15px;
 }
-.dashboard-contain .accordion .card .card-body .location-list {
+.dashboard-contain .accordion-data .card .card-body .location-list {
   display: flex;
   align-content: center;
   align-items: center;
@@ -2470,7 +2472,7 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   margin-bottom: 15px;
   border-bottom: 1px dashed #e7eded;
 }
-.dashboard-contain .accordion .card .card-body .location-list li {
+.dashboard-contain .accordion-data .card .card-body .location-list li {
   position: relative;
   z-index: 9;
   width: calc(50% - 15px);
@@ -2481,7 +2483,7 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   align-content: center;
   gap: 15px;
 }
-.dashboard-contain .accordion .card .card-body .location-list li::after {
+.dashboard-contain .accordion-data .card .card-body .location-list li::after {
   content: "";
   position: absolute;
   width: 110%;
@@ -2491,10 +2493,10 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   right: 50%;
   z-index: -1;
 }
-.dashboard-contain .accordion .card .card-body .location-list li:last-child::after {
+.dashboard-contain .accordion-data .card .card-body .location-list li:last-child::after {
   display: none;
 }
-.dashboard-contain .accordion .card .card-body .location-list li .icon {
+.dashboard-contain .accordion-data .card .card-body .location-list li .icon {
   width: 35px;
   height: 35px;
   background-color: var(--primary-color);
@@ -2504,49 +2506,49 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   align-content: center;
   justify-content: center;
 }
-.dashboard-contain .accordion .card .card-body .location-list li .icon img {
+.dashboard-contain .accordion-data .card .card-body .location-list li .icon img {
   width: 18px;
   height: 18px;
   -o-object-fit: contain;
      object-fit: contain;
   filter: var(--light-filter);
 }
-.dashboard-contain .accordion .card .card-body .location-list li span {
+.dashboard-contain .accordion-data .card .card-body .location-list li span {
   color: var(--dark-color);
   font-size: 15px;
   font-weight: 500;
   text-align: center;
 }
-.dashboard-contain .accordion .card .card-body .list {
+.dashboard-contain .accordion-data .card .card-body .list {
   display: flex;
   align-content: center;
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
 }
-.dashboard-contain .accordion .card .card-body .list li {
+.dashboard-contain .accordion-data .card .card-body .list li {
   display: flex;
   align-content: center;
   align-items: center;
   gap: 15px;
 }
-.dashboard-contain .accordion .card .card-body .list li img {
+.dashboard-contain .accordion-data .card .card-body .list li img {
   width: 24px;
   height: 24px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.dashboard-contain .accordion .card .card-body .list li .data {
+.dashboard-contain .accordion-data .card .card-body .list li .data {
   font-size: 18px;
   font-weight: 700;
   color: var(--gray-color);
 }
-.dashboard-contain .accordion .card .card-body .list li .name {
+.dashboard-contain .accordion-data .card .card-body .list li .name {
   font-size: 20px;
   font-weight: 700;
   color: var(--dark-color);
 }
-.dashboard-contain .accordion .card .status {
+.dashboard-contain .accordion-data .card .status {
   font-size: 14px;
   font-weight: 700;
   padding: 9px 12px;
@@ -2556,26 +2558,32 @@ html[dir=ltr] .dashboard-contain .account-link .flex-data .lang::after {
   display: block;
   width: -moz-fit-content;
   width: fit-content;
+  border: 1px solid;
 }
-.dashboard-contain .accordion .card .status.success {
+.dashboard-contain .accordion-data .card .status.success {
   background-color: #e9faef;
   color: #34c759;
+  border-color: rgba(52, 199, 89, 0.4);
 }
-.dashboard-contain .accordion .card .status.red {
+.dashboard-contain .accordion-data .card .status.red {
   background-color: #fbeae4;
   color: #e22900;
+  border-color: rgba(226, 41, 0, 0.4);
 }
-.dashboard-contain .accordion .card .status.incomplete {
+.dashboard-contain .accordion-data .card .status.incomplete {
   background-color: #f7f9f9;
   color: #b5b9b9;
+  border-color: rgba(181, 185, 185, 0.4);
 }
-.dashboard-contain .accordion .card .status.accepted {
+.dashboard-contain .accordion-data .card .status.accepted {
   background-color: rgba(255, 141, 40, 0.1);
   color: #ff8d28;
+  border-color: rgba(255, 141, 40, 0.4);
 }
-.dashboard-contain .accordion .card .status.new {
+.dashboard-contain .accordion-data .card .status.new {
   background-color: #e9f6ff;
   color: #26a0fc;
+  border-color: rgba(38, 160, 252, 0.4);
 }
 .dashboard-contain .table-responsive {
   width: 100%;
