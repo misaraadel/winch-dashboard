@@ -54,7 +54,10 @@
               />
             </a>
 
-            <a href="add-transcation.html" class="custom-btn dark-btn small-btn">
+            <a
+              href="add-transcation.html"
+              class="custom-btn dark-btn small-btn"
+            >
               <img
                 src="assets/images/icons/add.svg"
                 loading="lazy"
@@ -123,9 +126,1063 @@
             </ul>
           </div>
 
-          <div class="col-lg-9 col-12">
+          <div class="col-lg-6 col-12">
             <div class="data-contain-transactions">
-              <h1 class="page-name">اضافة رحلة جديدة</h1>
+              <form action="#" class="form-contain">
+                <!-- Step 1: Location Selection -->
+                <ul class="steps">
+                  <li data-step="1" class="active"></li>
+
+                  <li data-step="2"></li>
+
+                  <li data-step="3"></li>
+
+                  <li data-step="4"></li>
+
+                  <li data-step="5"></li>
+
+                  <li data-step="6"></li>
+
+                  <li data-step="7"></li>
+                </ul>
+
+                <div class="form-step active" data-step="1">
+                  <h1 class="page-name small">اختر وجهتك</h1>
+
+                  <div class="custom-location-select" data-type="from">
+                    <label for=""> نقطة التحميل </label>
+
+                    <div class="select-trigger">
+                      <img
+                        src="assets/images/icons/location.png"
+                        alt=""
+                        class="location-icon"
+                      />
+                      <span class="selected-text">من </span>
+                      <img
+                        src="assets/images/icons/down-arrow.svg"
+                        alt=""
+                        class="arrow-icon"
+                      />
+                    </div>
+
+                    <div class="select-dropdown">
+                      <!-- Search Input -->
+                      <div class="search-box">
+                        <img
+                          src="assets/images/icons/search.svg"
+                          alt=""
+                          class="search-icon"
+                        />
+                        <input
+                          type="text"
+                          class="search-input"
+                          placeholder="ابحث عن موقع..."
+                        />
+                      </div>
+
+                      <!-- Recent Locations Section -->
+                      <div class="recent-locations">
+                        <h4 class="section-title">الأماكن الأخيرة</h4>
+                        <ul class="locations-list recent-list">
+                          <!-- Will be populated by JS -->
+                        </ul>
+                      </div>
+
+                      <!-- All Locations Section -->
+                      <div class="all-locations">
+                        <h4 class="section-title">جميع الأماكن</h4>
+                        <ul class="locations-list all-list">
+                          <li class="location-item" data-value="cairo">
+                            <img
+                              src="assets/images/icons/location.png"
+                              alt=""
+                            />
+                            <span>القاهرة</span>
+                          </li>
+                          <li class="location-item" data-value="giza">
+                            <img
+                              src="assets/images/icons/location.png"
+                              alt=""
+                            />
+                            <span>الجيزة</span>
+                          </li>
+                          <li class="location-item" data-value="alex">
+                            <img
+                              src="assets/images/icons/location.png"
+                              alt=""
+                            />
+                            <span>الإسكندرية</span>
+                          </li>
+                          <li class="location-item" data-value="mansoura">
+                            <img
+                              src="assets/images/icons/location.png"
+                              alt=""
+                            />
+                            <span>المنصورة</span>
+                          </li>
+                          <li class="location-item" data-value="tanta">
+                            <img
+                              src="assets/images/icons/location.png"
+                              alt=""
+                            />
+                            <span>طنطا</span>
+                          </li>
+                          <li class="location-item" data-value="aswan">
+                            <img
+                              src="assets/images/icons/location.png"
+                              alt=""
+                            />
+                            <span>أسوان</span>
+                          </li>
+                          <li class="location-item" data-value="luxor">
+                            <img
+                              src="assets/images/icons/location.png"
+                              alt=""
+                            />
+                            <span>الأقصر</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="custom-location-select" data-type="to">
+                    <label for=""> نقطة الوصول </label>
+
+                    <div class="select-trigger">
+                      <img
+                        src="assets/images/icons/location.png"
+                        alt=""
+                        class="location-icon"
+                      />
+                      <span class="selected-text">إلي</span>
+                      <img
+                        src="assets/images/icons/down-arrow.svg"
+                        alt=""
+                        class="arrow-icon"
+                      />
+                    </div>
+
+                    <div class="select-dropdown">
+                      <!-- Search Input -->
+                      <div class="search-box">
+                        <img
+                          src="assets/images/icons/search.svg"
+                          alt=""
+                          class="search-icon"
+                        />
+                        <input
+                          type="text"
+                          class="search-input"
+                          placeholder="ابحث عن موقع..."
+                        />
+                      </div>
+
+                      <!-- Recent Locations Section -->
+                      <div class="recent-locations">
+                        <h4 class="section-title">الأماكن الأخيرة</h4>
+                        <ul class="locations-list recent-list">
+                          <!-- Will be populated by JS -->
+                        </ul>
+                      </div>
+
+                      <!-- All Locations Section -->
+                      <div class="all-locations">
+                        <h4 class="section-title">جميع الأماكن</h4>
+                        <ul class="locations-list all-list">
+                          <li class="location-item" data-value="cairo">
+                            <img
+                              src="assets/images/icons/location.png"
+                              alt=""
+                            />
+                            <span>القاهرة</span>
+                          </li>
+                          <li class="location-item" data-value="giza">
+                            <img
+                              src="assets/images/icons/location.png"
+                              alt=""
+                            />
+                            <span>الجيزة</span>
+                          </li>
+                          <li class="location-item" data-value="alex">
+                            <img
+                              src="assets/images/icons/location.png"
+                              alt=""
+                            />
+                            <span>الإسكندرية</span>
+                          </li>
+                          <li class="location-item" data-value="mansoura">
+                            <img
+                              src="assets/images/icons/location.png"
+                              alt=""
+                            />
+                            <span>المنصورة</span>
+                          </li>
+                          <li class="location-item" data-value="tanta">
+                            <img
+                              src="assets/images/icons/location.png"
+                              alt=""
+                            />
+                            <span>طنطا</span>
+                          </li>
+                          <li class="location-item" data-value="aswan">
+                            <img
+                              src="assets/images/icons/location.png"
+                              alt=""
+                            />
+                            <span>أسوان</span>
+                          </li>
+                          <li class="location-item" data-value="luxor">
+                            <img
+                              src="assets/images/icons/location.png"
+                              alt=""
+                            />
+                            <span>الأقصر</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 2: Additional Data -->
+                <div class="form-step" data-step="2" style="display: none">
+                  <h2 class="page-name small">اختر نوع السيارة</h2>
+
+                  <div class="row">
+                    <div class="col-lg-6 col-12 mb-3">
+                      <label
+                        for="car-type-1"
+                        class="car-shape"
+                        data-car-name="دبابة"
+                        data-car-size="العرض ٦ متر / الطول ١٠ متر"
+                        data-car-weight="١٠ طن"
+                      >
+                        <input type="radio" name="car-type" id="car-type-1" />
+
+                        <div class="image-contain">
+                          <img
+                            src="assets/images/truck.png"
+                            loading="lazy"
+                            alt=""
+                          />
+                        </div>
+
+                        <div class="data">
+                          <p>دبابة</p>
+
+                          <ul class="list">
+                            <li>
+                              <span> ابعاد السيارة </span>
+
+                              <span class="data">
+                                العرض ٦ متر / الطول ١٠ متر
+                              </span>
+                            </li>
+
+                            <li>
+                              <span> حمولة السيارة </span>
+
+                              <span class="data"> ١٠ طن </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-3">
+                      <label
+                        for="car-type-2"
+                        class="car-shape"
+                        data-car-name="نقل"
+                        data-car-size="العرض ٤ متر / الطول ٨ متر"
+                        data-car-weight="٨ طن"
+                      >
+                        <input type="radio" name="car-type" id="car-type-2" />
+
+                        <div class="image-contain">
+                          <img
+                            src="assets/images/truck.png"
+                            loading="lazy"
+                            alt=""
+                          />
+                        </div>
+
+                        <div class="data">
+                          <p>نقل</p>
+
+                          <ul class="list">
+                            <li>
+                              <span> ابعاد السيارة </span>
+
+                              <span class="data">
+                                العرض ٤ متر / الطول ٨ متر
+                              </span>
+                            </li>
+
+                            <li>
+                              <span> حمولة السيارة </span>
+
+                              <span class="data"> ٨ طن </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-3">
+                      <label
+                        for="car-type-3"
+                        class="car-shape"
+                        data-car-name="لوري"
+                        data-car-size="العرض ٣ متر / الطول ٦ متر"
+                        data-car-weight="٥ طن"
+                      >
+                        <input type="radio" name="car-type" id="car-type-3" />
+
+                        <div class="image-contain">
+                          <img
+                            src="assets/images/truck.png"
+                            loading="lazy"
+                            alt=""
+                          />
+                        </div>
+
+                        <div class="data">
+                          <p>لوري</p>
+
+                          <ul class="list">
+                            <li>
+                              <span> ابعاد السيارة </span>
+
+                              <span class="data">
+                                العرض ٣ متر / الطول ٦ متر
+                              </span>
+                            </li>
+
+                            <li>
+                              <span> حمولة السيارة </span>
+
+                              <span class="data"> ٥ طن </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-3">
+                      <label
+                        for="car-type-4"
+                        class="car-shape"
+                        data-car-name="ربع نقل"
+                        data-car-size="العرض ٢ متر / الطول ٤ متر"
+                        data-car-weight="٣ طن"
+                      >
+                        <input type="radio" name="car-type" id="car-type-4" />
+
+                        <div class="image-contain">
+                          <img
+                            src="assets/images/truck.png"
+                            loading="lazy"
+                            alt=""
+                          />
+                        </div>
+
+                        <div class="data">
+                          <p>ربع نقل</p>
+
+                          <ul class="list">
+                            <li>
+                              <span> ابعاد السيارة </span>
+
+                              <span class="data">
+                                العرض ٢ متر / الطول ٤ متر
+                              </span>
+                            </li>
+
+                            <li>
+                              <span> حمولة السيارة </span>
+
+                              <span class="data"> ٣ طن </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-step" data-step="3" style="display: none">
+                  <h2 class="page-name small">تفاصيل الحمولة</h2>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="average-price">
+                        <div class="data">
+                          <p>السعر المتوقع</p>
+
+                          <h2>1300 جنية</h2>
+                        </div>
+
+                        <span>
+                          ملحوظة : السعر غير شامل الكارتات والموازين
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-12 mb-3">
+                      <label
+                        for="car-details-1"
+                        class="car-type-option"
+                        data-car-detail="دبابة مفتوح"
+                        data-price="1500"
+                      >
+                        <input
+                          type="radio"
+                          name="car-details"
+                          id="car-details-1"
+                        />
+
+                        <div class="image-contain">
+                          <img
+                            src="assets/images/truck.png"
+                            loading="lazy"
+                            alt=""
+                          />
+                        </div>
+
+                        <div class="data">
+                          <p>دبابة مفتوح</p>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-3">
+                      <label
+                        for="car-details-2"
+                        class="car-type-option"
+                        data-car-detail="دبابة صندوق"
+                        data-price="1800"
+                      >
+                        <input
+                          type="radio"
+                          name="car-details"
+                          id="car-details-2"
+                        />
+
+                        <div class="image-contain">
+                          <img
+                            src="assets/images/truck.png"
+                            loading="lazy"
+                            alt=""
+                          />
+                        </div>
+
+                        <div class="data">
+                          <p>دبابة صندوق</p>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-3">
+                      <label
+                        for="car-details-3"
+                        class="car-type-option"
+                        data-car-detail="دبابة تبريد"
+                        data-price="2200"
+                      >
+                        <input
+                          type="radio"
+                          name="car-details"
+                          id="car-details-3"
+                        />
+
+                        <div class="image-contain">
+                          <img
+                            src="assets/images/truck.png"
+                            loading="lazy"
+                            alt=""
+                          />
+                        </div>
+
+                        <div class="data">
+                          <p>دبابة تبريد</p>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-step" data-step="4" style="display: none">
+                  <h2 class="page-name small">تفاصيل الحمولة</h2>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="average-price alert">
+                        <span class="alert-title"> تبنية هام </span>
+
+                        <span class="d-block">
+                          في حالة طلب السيارة في نفس اليوم يجب الحجز قبلها باربع
+                          ساعات
+                        </span>
+
+                        <span> اقصي موعد لطلب الرحلات ٩ ساعات </span>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-3">
+                      <div class="form-group no-height">
+                        <label class="no-translate" for="trip-date"
+                          >التاريخ</label
+                        >
+                        <input
+                          type="date"
+                          id="trip-date"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-3">
+                      <div class="form-group no-height">
+                        <label class="no-translate" for="trip-time"
+                          >الوقت</label
+                        >
+                        <input
+                          type="time"
+                          id="trip-time"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-3">
+                      <div class="form-group no-height height-index">
+                        <label class="no-translate" for="cargo-type"
+                          >نوع البضاعة</label
+                        >
+                        <div class="custom-select-dropdown">
+                          <div class="select-trigger-custom">
+                            <span class="selected-text-custom"
+                              >اختر نوع البضاعة</span
+                            >
+                            <img
+                              src="assets/images/icons/down-arrow.svg"
+                              alt=""
+                              class="arrow-icon-custom"
+                            />
+                          </div>
+
+                          <div class="select-dropdown-custom">
+                            <div class="search-box">
+                              <img
+                                src="assets/images/icons/search.svg"
+                                alt=""
+                                class="search-icon"
+                              />
+                              <input
+                                type="text"
+                                class="search-input-custom"
+                                placeholder="ابحث عن نوع البضاعة..."
+                              />
+                            </div>
+
+                            <ul class="cargo-list">
+                              <li class="cargo-item" data-value="مواد-بناء">
+                                مواد بناء
+                              </li>
+                              <li class="cargo-item" data-value="اثاث">أثاث</li>
+                              <li
+                                class="cargo-item"
+                                data-value="اجهزة-كهربائية"
+                              >
+                                أجهزة كهربائية
+                              </li>
+                              <li class="cargo-item" data-value="مواد-غذائية">
+                                مواد غذائية
+                              </li>
+                              <li class="cargo-item" data-value="ملابس">
+                                ملابس
+                              </li>
+                              <li class="cargo-item" data-value="سيارات">
+                                سيارات
+                              </li>
+                              <li class="cargo-item" data-value="معدات">
+                                معدات
+                              </li>
+                              <li class="cargo-item" data-value="اخري">أخرى</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-3">
+                      <div class="form-group no-height">
+                        <label class="no-translate" for="cargo-weight"
+                          >وزن الحمولة (بالطن)</label
+                        >
+                        <input
+                          type="number"
+                          id="cargo-weight"
+                          class="form-control"
+                          placeholder="ادخل وزن الحمولة"
+                          min="0"
+                          step="0.1"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-group no-height">
+                        <label class="no-translate" for="">
+                          طلبات اضافية في السيارة ( اختياري )
+                        </label>
+
+                        <div class="flex-data additional-requests">
+                          <label for="req-1" class="tag">
+                            <input
+                              type="checkbox"
+                              id="req-1"
+                              name="additional-req"
+                              value="ورق"
+                            />
+
+                            <span> ورق </span>
+                          </label>
+
+                          <label for="req-2" class="tag">
+                            <input
+                              type="checkbox"
+                              id="req-2"
+                              name="additional-req"
+                              value="حبل"
+                            />
+
+                            <span> حبل </span>
+                          </label>
+
+                          <label for="req-3" class="tag">
+                            <input
+                              type="checkbox"
+                              id="req-3"
+                              name="additional-req"
+                              value="اشرطة امان"
+                            />
+
+                            <span> اشرطة امان </span>
+                          </label>
+
+                          <label for="req-4" class="tag">
+                            <input
+                              type="checkbox"
+                              id="req-4"
+                              name="additional-req"
+                              value="عمال"
+                            />
+
+                            <span> عمال </span>
+                          </label>
+
+                          <label for="req-5" class="tag">
+                            <input
+                              type="checkbox"
+                              id="req-5"
+                              name="additional-req"
+                              value="رافعة"
+                            />
+
+                            <span> رافعة </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-step" data-step="5" style="display: none">
+                  <h2 class="page-name small">صور الحمولة (اختياري)</h2>
+
+                  <div class="row">
+                    <div class="col-lg-6 col-12 mb-3">
+                      <div class="upload-image-box">
+                        <input
+                          type="file"
+                          id="cargo-image-1"
+                          accept="image/*"
+                          class="image-input"
+                        />
+                        <label for="cargo-image-1" class="upload-label">
+                          <div class="upload-icon">
+                            <img
+                              src="assets/images/icons/add.svg"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </div>
+                          <span class="upload-text">إضافة صورة</span>
+                          <img
+                            src=""
+                            alt=""
+                            class="preview-image"
+                            style="display: none"
+                          />
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-3">
+                      <div class="upload-image-box">
+                        <input
+                          type="file"
+                          id="cargo-image-2"
+                          accept="image/*"
+                          class="image-input"
+                        />
+                        <label for="cargo-image-2" class="upload-label">
+                          <div class="upload-icon">
+                            <img
+                              src="assets/images/icons/add.svg"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </div>
+                          <span class="upload-text">إضافة صورة</span>
+                          <img
+                            src=""
+                            alt=""
+                            class="preview-image"
+                            style="display: none"
+                          />
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-3">
+                      <div class="upload-image-box">
+                        <input
+                          type="file"
+                          id="cargo-image-3"
+                          accept="image/*"
+                          class="image-input"
+                        />
+                        <label for="cargo-image-3" class="upload-label">
+                          <div class="upload-icon">
+                            <img
+                              src="assets/images/icons/add.svg"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </div>
+                          <span class="upload-text">إضافة صورة</span>
+                          <img
+                            src=""
+                            alt=""
+                            class="preview-image"
+                            style="display: none"
+                          />
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-3">
+                      <div class="upload-image-box">
+                        <input
+                          type="file"
+                          id="cargo-image-4"
+                          accept="image/*"
+                          class="image-input"
+                        />
+                        <label for="cargo-image-4" class="upload-label">
+                          <div class="upload-icon">
+                            <img
+                              src="assets/images/icons/add.svg"
+                              loading="lazy"
+                              alt=""
+                            />
+                          </div>
+                          <span class="upload-text">إضافة صورة</span>
+                          <img
+                            src=""
+                            alt=""
+                            class="preview-image"
+                            style="display: none"
+                          />
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-group text-area form-shape">
+                        <textarea
+                          name="cargo-comment"
+                          id="cargo-comment"
+                          class="form-control"
+                          placeholder="اكتب تعليق هنا"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-step" data-step="6" style="display: none">
+                  <div class="form-group form-shape no-height">
+                    <label class="no-translate"> كود الخصم </label>
+
+                    <div class="form-icon">
+                      <img
+                        src="assets/images/icons/copy.svg"
+                        loading="lazy"
+                        class="icon"
+                        alt=""
+                      />
+
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="ادخل كود الخصم"
+                      />
+
+                      <a href="#" class="accept"> تطبيق </a>
+                    </div>
+                  </div>
+
+                  <h2 class="page-name small">تفاصيل السعر</h2>
+
+                  <p class="price-description">
+                    يشمل السعر المباشر للشحن فقط ولا يشمل الكارتات والموازين
+                  </p>
+
+                  <ul class="price-list">
+                    <li>
+                      <span class="data"> رسوم الحمولة </span>
+
+                      <span class="name"> 1300 جنية </span>
+                    </li>
+
+                    <li>
+                      <span class="data"> رسوم الحمولة </span>
+
+                      <span class="name"> 1300 جنية </span>
+                    </li>
+
+                    <li>
+                      <span class="data"> كود الخصم </span>
+
+                      <span class="name"> 1300 جنية </span>
+                    </li>
+
+                    <li class="total-price">
+                      <span class="data"> الاجمالي </span>
+
+                      <span class="name"> 1300 جنية </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="form-step" data-step="7" style="display: none">
+                  <div class="success-message-contain">
+                    <div class="icon-success">
+                      <img
+                        src="assets/images/icons/check-modal.svg"
+                        loading="lazy"
+                        alt=""
+                      />
+                    </div>
+
+                    <h2 class="success-title">تم إنشاء الطلب بنجاح!</h2>
+
+                    <p class="success-description">
+                      تم إنشاء طلبك بنجاح وجاري البحث عن سائق مناسب. سيتم إشعارك
+                      عند العثور على سائق.
+                    </p>
+
+                    <div class="order-number">
+                      <span>رقم الطلب:</span>
+                      <strong>#12345</strong>
+                    </div>
+
+                    <div class="success-actions">
+                      <a
+                        href="transactions.html"
+                        class="custom-btn primary-btn small-btn"
+                      >
+                        <span>عرض الطلبات</span>
+                      </a>
+
+                      <a
+                        href="add-transcation.html"
+                        class="custom-btn primary-border small-btn"
+                      >
+                        <span>طلب جديد</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex-button step-one">
+                  <a
+                    href="#"
+                    class="custom-btn primary-border small-btn btn-prev"
+                    style="display: none"
+                  >
+                    <img
+                      src="assets/images/icons/right_arrow.svg"
+                      loading="lazy"
+                      alt=""
+                    />
+
+                    <span> السابق </span>
+                  </a>
+
+                  <a href="#" class="custom-btn dark-btn small-btn btn-next">
+                    <span> التالي </span>
+                    <img
+                      src="assets/images/icons/right_arrow.svg"
+                      loading="lazy"
+                      class="scale-icon"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-12">
+            <div class="data-contain-transactions small-width summary-list">
+              <h1 class="page-name small">مراجعة الطلب</h1>
+
+              <ul class="list summary-locations">
+                <div
+                  class="link dark-link summary-date-time"
+                  style="display: none"
+                >
+                  <img
+                    src="assets/images/icons/date.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+
+                  <span class="date-time-text">-</span>
+                </div>
+
+                <div
+                  class="summary-car summary-car-detail"
+                  style="display: none"
+                >
+                  <img src="assets/images/truck.png" loading="lazy" alt="" />
+
+                  <div class="car-info">
+                    <span class="car-name">-</span>
+
+                    <div class="flex-data">
+                      <div class="car-detail-text">-</div>
+
+                      <div class="car-weight">-</div>
+
+                      <div class="car-type">-</div>
+                    </div>
+                    <small class="car-details">-</small>
+                  </div>
+                </div>
+
+                <div
+                  class="summary-additional-requests"
+                  style="display: none; margin-top: 0px"
+                >
+                  <h4
+                    style="
+                      font-size: 14px;
+                      color: var(--gray-color);
+                      margin-bottom: 10px;
+                    "
+                  >
+                    طلبات إضافية:
+                  </h4>
+                  <div class="additional-requests-list"></div>
+                </div>
+
+                <div
+                  class="summary-price"
+                  style="
+                    display: none;
+                    padding: 15px 0 0px;
+                    border-top: 1px solid #e7eded;
+                    margin-top: 0px;
+                  "
+                >
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                    "
+                  >
+                    <span
+                      style="
+                        color: var(--gray-color);
+                        font-size: 15px;
+                        font-weight: 500;
+                      "
+                      >السعر</span
+                    >
+                    <span
+                      class="price-text"
+                      style="
+                        color: var(--primary-color);
+                        font-size: 20px;
+                        font-weight: 700;
+                      "
+                      >-</span
+                    >
+                  </div>
+                </div>
+
+                <li class="summary-from" style="display: none">
+                  <div class="icon form">
+                    <img
+                      src="assets/images/icons/location.png"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </div>
+
+                  <span class="from-text">-</span>
+                </li>
+
+                <li class="summary-to" style="display: none">
+                  <div class="icon">
+                    <img
+                      src="assets/images/icons/location.png"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </div>
+                  <span class="to-text">-</span>
+                </li>
+
+                <div class="comment" style="display: none">
+                  <img
+                    src="assets/images/icons/sms.svg"
+                    loading="lazy"
+                    alt=""
+                  />
+
+                  <span class="comment-text">-</span>
+                </div>
+              </ul>
+
+              <p
+                class="no-data-summary"
+                style="
+                  text-align: center;
+                  color: var(--gray-color);
+                  padding: 20px 0;
+                "
+              >
+                اختر الوجهة للبدء
+              </p>
             </div>
           </div>
         </div>
@@ -278,5 +1335,529 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/country-select-js/2.1.0/js/countrySelect.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+      // Custom Location Select Functionality with Multi-Step Form
+      $(document).ready(function () {
+        const recentLocationsKey = "recentLocations";
+        let recentLocations =
+          JSON.parse(localStorage.getItem(recentLocationsKey)) || [];
+
+        let currentStep = 1;
+        let formData = {
+          from: { value: "", name: "" },
+          to: { value: "", name: "" },
+          car: { name: "", size: "", weight: "" },
+          carDetail: "",
+          price: 0,
+          date: "",
+          time: "",
+          cargoType: "",
+          cargoWeight: "",
+          additionalRequests: [],
+          comment: "",
+        };
+
+        // Load recent locations
+        function loadRecentLocations() {
+          const recentList = $(".recent-list");
+          recentList.each(function () {
+            $(this).empty();
+
+            if (recentLocations.length === 0) {
+              $(this).html('<li class="no-recent">لا توجد أماكن حديثة</li>');
+              return;
+            }
+
+            recentLocations.slice(0, 3).forEach((location) => {
+              $(this).append(`
+                <li class="location-item recent" data-value="${location.value}">
+                  <img src="assets/images/icons/location.png" alt="">
+                  <span>${location.name}</span>
+                  <span class="recent-badge">حديث</span>
+                </li>
+              `);
+            });
+          });
+        }
+
+        // Save to recent locations
+        function saveToRecent(value, name) {
+          // Remove if already exists
+          recentLocations = recentLocations.filter(
+            (loc) => loc.value !== value
+          );
+
+          // Add to beginning
+          recentLocations.unshift({ value, name });
+
+          // Keep only last 5
+          recentLocations = recentLocations.slice(0, 5);
+
+          localStorage.setItem(
+            recentLocationsKey,
+            JSON.stringify(recentLocations)
+          );
+          loadRecentLocations();
+        }
+
+        // Update Summary
+        function updateSummary() {
+          if (formData.from.name) {
+            $(".summary-from").show();
+            $(".from-text").text(formData.from.name);
+            $(".no-data-summary").hide();
+          }
+
+          if (formData.to.name) {
+            $(".summary-to").show();
+            $(".to-text").text(formData.to.name);
+            $(".no-data-summary").hide();
+          }
+
+          if (formData.car.name) {
+            $(".summary-car").show();
+            $(".car-name").text(formData.car.name);
+            $(".car-details").text(
+              `${formData.car.size} - ${formData.car.weight}`
+            );
+            $(".no-data-summary").hide();
+          }
+
+          if (formData.carDetail) {
+            $(".car-detail-text").text(formData.carDetail);
+            $(".no-data-summary").hide();
+          }
+
+          if (formData.price > 0) {
+            $(".summary-price").show();
+            $(".price-text").text(`${formData.price} جنية`);
+            $(".no-data-summary").hide();
+          }
+
+          if (formData.date && formData.time) {
+            $(".summary-date-time").show();
+            const dateObj = new Date(formData.date + "T" + formData.time);
+            const options = {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            };
+            const arabicDate = dateObj.toLocaleDateString("ar-EG", options);
+            $(".date-time-text").text(
+              `${arabicDate} / الساعة ${formData.time}`
+            );
+            $(".no-data-summary").hide();
+          }
+
+          if (formData.cargoWeight) {
+            $(".summary-cargo-weight").show();
+            $(".cargo-weight-text").text(
+              `وزن الحمولة: ${formData.cargoWeight} طن`
+            );
+            $(".car-weight").text(`${formData.cargoWeight} طن`).show();
+            $(".no-data-summary").hide();
+          }
+
+          if (formData.cargoType) {
+            $(".car-type").text(formData.cargoType).show();
+            $(".no-data-summary").hide();
+          }
+
+          if (formData.comment) {
+            $(".comment").show();
+            $(".comment-text").text(formData.comment);
+            $(".no-data-summary").hide();
+          } else {
+            $(".comment").hide();
+          }
+
+          if (formData.additionalRequests.length > 0) {
+            $(".summary-additional-requests").show();
+            $(".additional-requests-list").empty();
+            formData.additionalRequests.forEach((req) => {
+              $(".additional-requests-list").append(`
+                <span style="display: inline-block; padding: 5px 10px; margin: 5px 5px 0 0; background-color: #e9faef; color: #34c759; border-radius: 5px; font-size: 13px;">
+                  ${req}
+                </span>
+              `);
+            });
+            $(".no-data-summary").hide();
+          } else {
+            $(".summary-additional-requests").hide();
+          }
+
+          if (
+            !formData.from.name &&
+            !formData.to.name &&
+            !formData.car.name &&
+            !formData.carDetail &&
+            formData.price === 0
+          ) {
+            $(".no-data-summary").show();
+            $(
+              ".summary-from, .summary-to, .summary-car, .summary-car-detail, .summary-price, .summary-date-time, .summary-cargo-weight, .summary-additional-requests"
+            ).hide();
+          }
+        }
+
+        // Toggle dropdown
+        $(".select-trigger").on("click", function (e) {
+          e.stopPropagation();
+          // Close other dropdowns
+          $(".custom-location-select")
+            .not($(this).parent())
+            .removeClass("active");
+          $(this).parent(".custom-location-select").toggleClass("active");
+        });
+
+        // Select location
+        $(document).on("click", ".location-item", function () {
+          const value = $(this).data("value");
+          const name = $(this).find("span").first().text();
+          const selectContainer = $(this).closest(".custom-location-select");
+          const selectType = selectContainer.data("type");
+
+          selectContainer.find(".selected-text").text(name);
+          selectContainer.removeClass("active");
+
+          // Save to form data
+          if (selectType === "from") {
+            formData.from = { value, name };
+          } else if (selectType === "to") {
+            formData.to = { value, name };
+          }
+
+          // Update summary
+          updateSummary();
+
+          // Save to recent
+          saveToRecent(value, name);
+        });
+
+        // Search functionality
+        $(".search-input").on("input", function () {
+          const searchTerm = $(this).val().toLowerCase().trim();
+          const container = $(this).closest(".select-dropdown");
+
+          if (searchTerm === "") {
+            container.find(".all-list .location-item").show();
+            container.find(".recent-locations").show();
+            return;
+          }
+
+          container.find(".recent-locations").hide();
+
+          container.find(".all-list .location-item").each(function () {
+            const locationName = $(this).find("span").text().toLowerCase();
+            if (locationName.includes(searchTerm)) {
+              $(this).show();
+            } else {
+              $(this).hide();
+            }
+          });
+        });
+
+        // Close dropdown when clicking outside
+        $(document).on("click", function (e) {
+          if (!$(e.target).closest(".custom-location-select").length) {
+            $(".custom-location-select").removeClass("active");
+          }
+        });
+
+        // Clear search when closing dropdown
+        $(document).on("click", ".select-trigger", function () {
+          if (!$(this).parent().hasClass("active")) {
+            $(this).parent().find(".search-input").val("");
+            $(this).parent().find(".all-list .location-item").show();
+            $(this).parent().find(".recent-locations").show();
+          }
+        });
+
+        // Car selection
+        $('input[name="car-type"]').on("change", function () {
+          const selectedLabel = $(this).closest(".car-shape");
+          const carName = selectedLabel.data("car-name");
+          const carSize = selectedLabel.data("car-size");
+          const carWeight = selectedLabel.data("car-weight");
+
+          // Save to form data
+          formData.car = {
+            name: carName,
+            size: carSize,
+            weight: carWeight,
+          };
+
+          // Update summary
+          updateSummary();
+        });
+
+        // Car details selection
+        $('input[name="car-details"]').on("change", function () {
+          console.log("Car details changed!"); // Debug
+          const selectedLabel = $(this).closest(".car-type-option");
+          const carDetail = selectedLabel.data("car-detail");
+          const price = selectedLabel.data("price");
+
+          console.log("Car Detail:", carDetail, "Price:", price); // Debug
+
+          // Save to form data
+          formData.carDetail = carDetail;
+          formData.price = price;
+
+          // Update summary
+          updateSummary();
+        });
+
+        // Multi-Step Navigation
+        function updateStepsIndicator() {
+          // Reset all steps
+          $(".steps li").removeClass("active done");
+
+          // Mark completed steps as done
+          for (let i = 1; i < currentStep; i++) {
+            $(`.steps li[data-step="${i}"]`).addClass("done");
+          }
+
+          // Mark current step as active
+          $(`.steps li[data-step="${currentStep}"]`).addClass("active");
+        }
+
+        function showStep(step) {
+          $(".form-step").hide();
+          $(`.form-step[data-step="${step}"]`).show();
+
+          // Show/Hide buttons and update flex-button class
+          if (step === 1) {
+            $(".btn-prev").hide();
+            $(".btn-next").show().find("span").text("التالي");
+            $(".flex-button").addClass("step-one");
+          } else if (step === 6) {
+            // Step 6 - تفاصيل السعر
+            $(".btn-prev").show();
+            $(".btn-next").show().find("span").text("تأكيد");
+            $(".flex-button").removeClass("step-one").show();
+          } else if (step === 7) {
+            // Last step - Success message - hide all buttons
+            $(".btn-prev, .btn-next").hide();
+            $(".flex-button").hide();
+          } else {
+            $(".btn-prev").show();
+            $(".btn-next").show().find("span").text("التالي");
+            $(".flex-button").removeClass("step-one").show();
+          }
+
+          currentStep = step;
+          updateStepsIndicator();
+        }
+
+        // Next Button
+        $(".btn-next").on("click", function (e) {
+          e.preventDefault();
+
+          if (currentStep === 1) {
+            // Validate step 1
+            if (!formData.from.name || !formData.to.name) {
+              alert("برجاء اختيار الوجهة من والي");
+              return;
+            }
+            showStep(2);
+          } else if (currentStep === 2) {
+            // Validate step 2
+            if (!formData.car.name) {
+              alert("برجاء اختيار نوع السيارة");
+              return;
+            }
+            showStep(3);
+          } else if (currentStep === 3) {
+            // Validate step 3
+            if (!formData.carDetail) {
+              alert("برجاء اختيار تفاصيل الحمولة");
+              return;
+            }
+            showStep(4);
+          } else if (currentStep === 4) {
+            // Validate step 4
+            if (!formData.date || !formData.time) {
+              alert("برجاء اختيار التاريخ والوقت");
+              return;
+            }
+            showStep(5);
+          } else if (currentStep === 5) {
+            // Go to step 6 (تفاصيل السعر)
+            showStep(6);
+          } else if (currentStep === 6) {
+            // تأكيد - Go to success message
+            showStep(7);
+          }
+        });
+
+        // Previous Button
+        $(".btn-prev").on("click", function (e) {
+          e.preventDefault();
+
+          if (currentStep > 1) {
+            showStep(currentStep - 1);
+          }
+        });
+
+        // Initialize
+        loadRecentLocations();
+        showStep(1);
+
+        // Set date input min and max (3 days from today)
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+
+        const maxDate = new Date(today);
+        maxDate.setDate(maxDate.getDate() + 3);
+
+        const formatDate = (date) => {
+          const year = date.getFullYear();
+          const month = String(date.getMonth() + 1).padStart(2, "0");
+          const day = String(date.getDate()).padStart(2, "0");
+          return `${year}-${month}-${day}`;
+        };
+
+        $("#trip-date").attr("min", formatDate(tomorrow));
+        $("#trip-date").attr("max", formatDate(maxDate));
+
+        // Custom select dropdown for cargo type
+        $(".select-trigger-custom").on("click", function (e) {
+          e.stopPropagation();
+          $(this).parent(".custom-select-dropdown").toggleClass("active");
+        });
+
+        $(".cargo-item").on("click", function () {
+          const value = $(this).data("value");
+          const text = $(this).text();
+
+          $(".selected-text-custom").text(text);
+          $(".custom-select-dropdown").removeClass("active");
+
+          // Save to form data
+          formData.cargoType = text;
+          updateSummary();
+        });
+
+        // Search in cargo list
+        $(".search-input-custom").on("input", function () {
+          const searchTerm = $(this).val().toLowerCase().trim();
+
+          $(".cargo-item").each(function () {
+            const itemText = $(this).text().toLowerCase();
+            if (itemText.includes(searchTerm)) {
+              $(this).show();
+            } else {
+              $(this).hide();
+            }
+          });
+        });
+
+        // Close dropdown when clicking outside
+        $(document).on("click", function (e) {
+          if (!$(e.target).closest(".custom-select-dropdown").length) {
+            $(".custom-select-dropdown").removeClass("active");
+          }
+        });
+
+        // Checkbox toggle additional requests section
+        $("#additional-requests").on("change", function () {
+          if ($(this).is(":checked")) {
+            $(".additional-requests-section").slideDown();
+          } else {
+            $(".additional-requests-section").slideUp();
+            $("#additional-notes").val("");
+          }
+        });
+
+        // Additional requests checkboxes styling
+        $(document).on("change", 'input[name="additional-req"]', function () {
+          const label = $(this).parent("label");
+          console.log(
+            "Checkbox changed:",
+            $(this).val(),
+            "Checked:",
+            $(this).is(":checked")
+          ); // Debug
+
+          if ($(this).is(":checked")) {
+            label.addClass("success");
+            const value = $(this).val();
+            if (!formData.additionalRequests.includes(value)) {
+              formData.additionalRequests.push(value);
+            }
+          } else {
+            label.removeClass("success");
+            const value = $(this).val();
+            formData.additionalRequests = formData.additionalRequests.filter(
+              (item) => item !== value
+            );
+          }
+
+          console.log("Additional Requests:", formData.additionalRequests); // Debug
+          updateSummary();
+        });
+
+        // Date input change
+        $("#trip-date").on("change", function () {
+          formData.date = $(this).val();
+          updateSummary();
+        });
+
+        // Time input change
+        $("#trip-time").on("change", function () {
+          formData.time = $(this).val();
+          updateSummary();
+        });
+
+        // Cargo weight input change
+        $("#cargo-weight").on("input", function () {
+          formData.cargoWeight = $(this).val();
+          updateSummary();
+        });
+
+        // Comment textarea change
+        $("#cargo-comment").on("input", function () {
+          formData.comment = $(this).val();
+          updateSummary();
+        });
+
+        // Image upload preview
+        $(".image-input").on("change", function () {
+          const input = this;
+          const label = $(this).siblings(".upload-label");
+          const preview = label.find(".preview-image");
+
+          if (input.files && input.files[0]) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+              preview.attr("src", e.target.result);
+              preview.show();
+              label.addClass("has-image");
+            };
+
+            reader.readAsDataURL(input.files[0]);
+          }
+        });
+
+        // Remove image on click when has image
+        $(".upload-label").on("click", function (e) {
+          if ($(this).hasClass("has-image")) {
+            e.preventDefault();
+            const input = $(this).siblings(".image-input");
+            const preview = $(this).find(".preview-image");
+
+            // Reset input and preview
+            input.val("");
+            preview.attr("src", "").hide();
+            $(this).removeClass("has-image");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
